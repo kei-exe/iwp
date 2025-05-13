@@ -51,9 +51,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 velocity = new Vector3(movement.x, rb.linearVelocity.y, movement.z);
-        rb.linearVelocity = velocity;
+        Vector3 currentVelocity = rb.linearVelocity;
+        Vector3 desiredVelocity = new Vector3(movement.x, currentVelocity.y, movement.z);
+        rb.linearVelocity = desiredVelocity;
     }
+
 
     void OnCollisionStay(Collision other)
     {
