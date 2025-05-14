@@ -1,76 +1,142 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed = 5f;
-    public float sprintMultiplier = 1.5f;
+    public float walkSpeed = 5f;
+    public float sprintSpeed = 8f;
+    public float crouchSpeed = 2.5f;
     public float jumpForce = 5f;
 
+    [Header("Crouch Settings")]
+    public float crouchHeight = 1f;
+    public float crouchCameraOffset = -0.5f;
+    public float crouchSmooth = 6f;
+
     [Header("Mouse Look")]
-    public float mouseSensitivity = 100f;
+    public float mouseSensitivity = 1f;
     public Transform cameraTransform;
 
+    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private InputActionAsset inputActions;
+
+    private InputAction move, look, jump, sprint, crouch;
+
     private Rigidbody rb;
-    private Vector3 movement;
-    private float xRotation = 0f;
-    private bool isGrounded;
+    private CapsuleCollider col;
+    private float originalHeight;
+    private Vector3 originalCamPos;
+    private float targetHeight;
+    private Vector3 targetCamPos;
+
+    private Vector2 moveInput;
+    private Vector2 lookInput;
+    private bool isGrounded = false;
+    private bool isCrouching = false;
+    private float rotation = 0f;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        col = GetComponent<CapsuleCollider>();
+        originalHeight = col.height;
+        targetHeight = originalHeight;
+
+        originalCamPos = cameraTransform.localPosition;
+        targetCamPos = originalCamPos;
+
+        // Reference actions
+        move = inputActions["Move"];
+        look = inputActions["Look"];
+        jump = inputActions["Jump"];
+        sprint = inputActions["Sprint"];
+        crouch = inputActions["Crouch"];
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     void Update()
     {
-        // Movement Input
-        float moveX = Input.GetAxis("Horizontal");
-        float moveZ = Input.GetAxis("Vertical");
+        CheckGrounded();
 
-        float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? moveSpeed * sprintMultiplier : moveSpeed;
-        Vector3 moveDir = transform.right * moveX + transform.forward * moveZ;
-        movement = moveDir.normalized * currentSpeed;
+        moveInput = move.ReadValue<Vector2>();
+        lookInput = look.ReadValue<Vector2>();
 
-        // Mouse Look Input
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        HandleLook();
+        HandleJump();
+        HandleCrouch();
+        SmoothCrouch();
+    }
 
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+    void FixedUpdate()
+    {
+        HandleMovement();
+    }
+
+    void HandleMovement()
+    {
+        float currentSpeed = walkSpeed;
+
+        if (isCrouching)
+        {
+            currentSpeed = crouchSpeed;
+        }
+        else if (sprint.IsPressed())
+        {
+            currentSpeed = sprintSpeed;
+        }
+
+        Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
+        Vector3 velocity = move.normalized * currentSpeed;
+        velocity.y = rb.linearVelocity.y;
+        rb.linearVelocity = velocity;
+    }
+
+    void HandleLook()
+    {
+        float mouseX = lookInput.x * mouseSensitivity;
+        float mouseY = lookInput.y * mouseSensitivity;
+
+        rotation -= mouseY;
+        rotation = Mathf.Clamp(rotation, -90f, 90f);
+
+        cameraTransform.localRotation = Quaternion.Euler(rotation, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
+    }
 
-        // Jump Input
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+    void HandleJump()
+    {
+        if (jump.WasPressedThisFrame() && isGrounded && !isCrouching)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 
-    void FixedUpdate()
+    void HandleCrouch()
     {
-        Vector3 currentVelocity = rb.linearVelocity;
-        Vector3 desiredVelocity = new Vector3(movement.x, currentVelocity.y, movement.z);
-        rb.linearVelocity = desiredVelocity;
-    }
+        bool crouchPressed = crouch.IsPressed();
 
-
-    void OnCollisionStay(Collision other)
-    {
-        // Basic ground check (can be improved later)
-        if (other.gameObject.CompareTag("Ground"))
+        if (crouchPressed != isCrouching)
         {
-            isGrounded = true;
+            isCrouching = crouchPressed;
+            targetHeight = isCrouching ? crouchHeight : originalHeight;
+            targetCamPos = isCrouching
+                ? originalCamPos + new Vector3(0, crouchCameraOffset, 0)
+                : originalCamPos;
         }
     }
 
-    void OnCollisionExit(Collision other)
+    void SmoothCrouch()
     {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
-        }
+        col.height = Mathf.Lerp(col.height, targetHeight, Time.deltaTime * crouchSmooth);
+        cameraTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, targetCamPos, Time.deltaTime * crouchSmooth);
+    }
+    void CheckGrounded()
+    {
+        float checkDistance = 0.1f;
+        Vector3 origin = transform.position + Vector3.up * 0.1f; // small offset above feet
+        isGrounded = Physics.Raycast(origin, Vector3.down, col.bounds.extents.y + checkDistance);
     }
 }
