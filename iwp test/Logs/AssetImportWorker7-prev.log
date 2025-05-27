@@ -1,0 +1,1596 @@
+Using pre-set license
+Built from '6000.0/staging' branch; Version is '6000.0.47f1 (2ad1ed33fd3b) revision 2806253'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26100) 64bit Core' Language: 'en' Physical Memory: 32492 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.0.47f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker7
+-projectPath
+C:/Users/Caelyn/Documents/GitHub/iwp/iwp test
+-logFile
+Logs/AssetImportWorker7.log
+-srvPort
+58800
+-job-worker-count
+9
+-background-job-worker-count
+8
+-gc-helper-count
+1
+Successfully changed project path to: C:/Users/Caelyn/Documents/GitHub/iwp/iwp test
+C:/Users/Caelyn/Documents/GitHub/iwp/iwp test
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [15380]  Target information:
+
+Player connection [15380]  * "[IP] 192.168.1.25 [Port] 0 [Flags] 2 [Guid] 1736112088 [EditorId] 1736112088 [Version] 1048832 [Id] WindowsEditor(7,??) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [15380] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [15380] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 9
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 105.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.47f1 (2ad1ed33fd3b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Caelyn/Documents/GitHub/iwp/iwp test/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 Ti Laptop GPU (ID=0x24e0)
+    Vendor:   NVIDIA
+    VRAM:     8018 MB
+    Driver:   32.0.15.7283
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56476
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.005613 seconds.
+- Loaded All Assemblies, in  0.915 seconds
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 229 ms
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.559 seconds
+Domain Reload Profiling: 1472ms
+	BeginReloadAssembly (107ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (221ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (44ms)
+	LoadAllAssembliesAndSetupDomain (534ms)
+		LoadAssemblies (104ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (531ms)
+			TypeCache.Refresh (530ms)
+				TypeCache.ScanAssembly (519ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (559ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (525ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (307ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (45ms)
+			ProcessInitializeOnLoadAttributes (109ms)
+			ProcessInitializeOnLoadMethodAttributes (61ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.787 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 0.94 ms, found 3 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.848 seconds
+Domain Reload Profiling: 1633ms
+	BeginReloadAssembly (133ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (24ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (579ms)
+		LoadAssemblies (288ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (369ms)
+			TypeCache.Refresh (315ms)
+				TypeCache.ScanAssembly (252ms)
+			BuildScriptInfoCaches (41ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (849ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (506ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (100ms)
+			ProcessInitializeOnLoadAttributes (313ms)
+			ProcessInitializeOnLoadMethodAttributes (71ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 2.14 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 218 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6351 unused Assets / (4.9 MB). Loaded Objects now: 7058.
+Memory consumption went from 175.5 MB to 170.5 MB.
+Total: 11.477400 ms (FindLiveObjects: 0.889100 ms CreateObjectMapping: 0.946200 ms MarkObjects: 6.221700 ms  DeleteObjects: 3.417300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1123.403751 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_BabyBed_01.prefab
+  artifactKey: Guid(4d0c48d8fee06c64caba5b70f05edeb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_BabyBed_01.prefab using Guid(4d0c48d8fee06c64caba5b70f05edeb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '397d4f9a3cc442d374c56df2ae3a65ad') in 0.4927435 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Bath_04.prefab
+  artifactKey: Guid(7a0df3fec6230ee4aa11e6d52d497aea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Bath_04.prefab using Guid(7a0df3fec6230ee4aa11e6d52d497aea) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e4094a99dafac9b7db4947e1c575fa6f') in 0.0198181 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Bed_11.prefab
+  artifactKey: Guid(5ff5a0ec214ff3f4489effdfefb114ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Bed_11.prefab using Guid(5ff5a0ec214ff3f4489effdfefb114ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '01d0bc4fe96b5ba4ec2da7916a25ef23') in 0.018811 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_BagChair_01.prefab
+  artifactKey: Guid(c84e56bfcd9d6e945b9781a759cad020) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_BagChair_01.prefab using Guid(c84e56bfcd9d6e945b9781a759cad020) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6f4ef6899f7ff917cf4877b623ee98eb') in 0.016191 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_BuildingBlockToy_05.prefab
+  artifactKey: Guid(8a5617a53643f1f428c48c2cd06de91e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_BuildingBlockToy_05.prefab using Guid(8a5617a53643f1f428c48c2cd06de91e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '25d04277c7e3fdb282bfd2786511b94f') in 0.015408 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Bed_04.prefab
+  artifactKey: Guid(09d7d3ab8dc3eb84aa466d754c74ea39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Bed_04.prefab using Guid(09d7d3ab8dc3eb84aa466d754c74ea39) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '301b07fa32b4df8ae4b5ca2ce57b19ca') in 0.0199129 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Bath_01.prefab
+  artifactKey: Guid(20eeb54c8ea8f474a947892c157b9e12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Bath_01.prefab using Guid(20eeb54c8ea8f474a947892c157b9e12) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '63f337d8c7b999174a831c1984589b25') in 0.0159715 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Book_01.prefab
+  artifactKey: Guid(bc21045d3561b68418c96017335c4a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Book_01.prefab using Guid(bc21045d3561b68418c96017335c4a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6e7914386b882abb18e421e702d26083') in 0.0178816 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Cabinet_01.prefab
+  artifactKey: Guid(0be1f8beef8fa9e40a326a0fe64b7b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Cabinet_01.prefab using Guid(0be1f8beef8fa9e40a326a0fe64b7b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e20273fbf036156875f149345b300d39') in 0.0168839 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Cabinet_06.prefab
+  artifactKey: Guid(ce7337e3a3bbc634195753b9a2d39f9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Cabinet_06.prefab using Guid(ce7337e3a3bbc634195753b9a2d39f9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0543d312ccc6c460b2b2c75ad16ec260') in 0.0152413 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_BuildingBlockToy_07.prefab
+  artifactKey: Guid(2685fec46257f6c408369e580a246a2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_BuildingBlockToy_07.prefab using Guid(2685fec46257f6c408369e580a246a2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5dbce18501f5be83a8409f738cc516ec') in 0.0169973 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Brush_01.prefab
+  artifactKey: Guid(68d220a65d615a245bdaea7641253539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Brush_01.prefab using Guid(68d220a65d615a245bdaea7641253539) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '21ea1fc88a4437f21134f58501cf4549') in 0.0149496 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Ball_05.prefab
+  artifactKey: Guid(3f8e8c9284831e94da7f8e9691b02314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Ball_05.prefab using Guid(3f8e8c9284831e94da7f8e9691b02314) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'daffdb0080c520894e7cad71fdd5788b') in 0.0167803 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Ball_02.prefab
+  artifactKey: Guid(88f83155bbdc30048946c8644ee9c963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Ball_02.prefab using Guid(88f83155bbdc30048946c8644ee9c963) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cc23a3d72789898bf446330ddbefcfd7') in 0.0162933 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Chair_02.prefab
+  artifactKey: Guid(b868d9c761bfadd49bbaeaaa7baf8ba1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Chair_02.prefab using Guid(b868d9c761bfadd49bbaeaaa7baf8ba1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1131fefdd456c0e11a10767565eb0677') in 0.0221925 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Chest.prefab
+  artifactKey: Guid(053fef6cc17b11f4485e27a5d11ffafe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Chest.prefab using Guid(053fef6cc17b11f4485e27a5d11ffafe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd306d883ec58e3667c06c0bcb5c86cb8') in 0.02188 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Chair_07.prefab
+  artifactKey: Guid(ec00b78e1fafc064e9d1bfab60dbd762) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Chair_07.prefab using Guid(ec00b78e1fafc064e9d1bfab60dbd762) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '108916ed528dcead26cdc343b285e071') in 0.0218293 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Chair_04.prefab
+  artifactKey: Guid(f0953a97f427a7f46b4a4c6f44cbdc79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Chair_04.prefab using Guid(f0953a97f427a7f46b4a4c6f44cbdc79) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '46f97d7b0eb14e40a2c95b077ed2a2f1') in 0.0242523 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Chest_But.prefab
+  artifactKey: Guid(275384329ac96114da4782d050dbd699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Chest_But.prefab using Guid(275384329ac96114da4782d050dbd699) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '56eb58572946534b98a6ce4ca0864b8a') in 0.0249913 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Desk_01.prefab
+  artifactKey: Guid(b86b4db3613b6c34db8159dee086b52b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Desk_01.prefab using Guid(b86b4db3613b6c34db8159dee086b52b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '72929aae029016d414e65f459317571b') in 0.0214941 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Carpet_07.prefab
+  artifactKey: Guid(c5fbc90129b452c4dbf12ad7365676eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Carpet_07.prefab using Guid(c5fbc90129b452c4dbf12ad7365676eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'efd7ab24cc43b3d2a53ee185efa9ff91') in 0.023603 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Desk_04.prefab
+  artifactKey: Guid(d12bb9511c616294cb28472c8d1bdf78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Desk_04.prefab using Guid(d12bb9511c616294cb28472c8d1bdf78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c4c80cc496bc0bab197221efb06e46e9') in 0.025884 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_BuildingBlockToy_02.prefab
+  artifactKey: Guid(2d915f7561753534ab37d9a11bfd61ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_BuildingBlockToy_02.prefab using Guid(2d915f7561753534ab37d9a11bfd61ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c8daf15f8ffe57dfadbfbde01809ad73') in 0.0175069 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Bed_02.prefab
+  artifactKey: Guid(ab4f2aa8e5463214390b9a543c4848b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Bed_02.prefab using Guid(ab4f2aa8e5463214390b9a543c4848b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0c972c0fd8158125b6886d5cd09515c2') in 0.017107 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Cabinet_03.prefab
+  artifactKey: Guid(d1ac8a960c65760428fbca843114e4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Cabinet_03.prefab using Guid(d1ac8a960c65760428fbca843114e4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6cc839b35067c06d5c6d59b4558a1fa3') in 0.0152573 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Faucet_01.prefab
+  artifactKey: Guid(7eed55408f5c314439b3cc196aca4b55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Faucet_01.prefab using Guid(7eed55408f5c314439b3cc196aca4b55) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '73e9ca09325037fb2cb93e108767632b') in 0.0217527 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_GenericHandle_01.prefab
+  artifactKey: Guid(a5f2cfb9c9815ce4f9e12cdea83f8cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_GenericHandle_01.prefab using Guid(a5f2cfb9c9815ce4f9e12cdea83f8cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a69dd42029e2501573ea4087b0c4dc34') in 0.0243471 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_GenericPillow_02.prefab
+  artifactKey: Guid(9d05a8a92dc3bc04cbdf76da307fa4a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_GenericPillow_02.prefab using Guid(9d05a8a92dc3bc04cbdf76da307fa4a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '49f39498d925c10d83a3718b55c01a5e') in 0.0242543 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Fireplace.prefab
+  artifactKey: Guid(a72227eb0d3779245b716fce94fb1fa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Fireplace.prefab using Guid(a72227eb0d3779245b716fce94fb1fa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '169f71ffb16751b478f751bd244fd8bc') in 0.0218596 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Homeplant_07.prefab
+  artifactKey: Guid(cc98aa33a8b15a64381c437a2624e579) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Homeplant_07.prefab using Guid(cc98aa33a8b15a64381c437a2624e579) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c1ee2be5e1af596080b4f9e13b584ef0') in 0.0218609 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Faucet_07.prefab
+  artifactKey: Guid(c86b1386556ff0c4f9489fb98b889905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Faucet_07.prefab using Guid(c86b1386556ff0c4f9489fb98b889905) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ca0f1111753ce95baff276fb8ab90710') in 0.0247533 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_HulaHoop_01.prefab
+  artifactKey: Guid(761e24fa02fc69e4e949b9f5547dc4e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_HulaHoop_01.prefab using Guid(761e24fa02fc69e4e949b9f5547dc4e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a171fe7176459c283e293572772a1fe5') in 0.0220845 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KidsCube_C.prefab
+  artifactKey: Guid(9887b53a8426f90439242df25a89269d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KidsCube_C.prefab using Guid(9887b53a8426f90439242df25a89269d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd87109276b4119efacdef8e7d22cb687') in 0.0243217 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KidsCube_F.prefab
+  artifactKey: Guid(fc62df12a5c50804eb879fcfb93a8fb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KidsCube_F.prefab using Guid(fc62df12a5c50804eb879fcfb93a8fb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '61946ba0e57355ae79294c1a00613a07') in 0.0242663 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KidsCube_L.prefab
+  artifactKey: Guid(b3e9f2b4f42d44e4f8247d628b741278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KidsCube_L.prefab using Guid(b3e9f2b4f42d44e4f8247d628b741278) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cf6df2025a65537120ed326a9d0ffb10') in 0.0204066 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KidsCube_S.prefab
+  artifactKey: Guid(8f00d288d55a8c54fae2fa9a17525d20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KidsCube_S.prefab using Guid(8f00d288d55a8c54fae2fa9a17525d20) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ef2b612261250c33f6a0e7ecf468e8b1') in 0.0228831 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KidsCube_V.prefab
+  artifactKey: Guid(f2b76968a7349aa4ab142b26bf31f82b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KidsCube_V.prefab using Guid(f2b76968a7349aa4ab142b26bf31f82b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd78eba2a527d8f9e1b7a6872d8ebffa3') in 0.0219992 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KidsCube_M.prefab
+  artifactKey: Guid(b0fe3f8c777153641b762cc2a317a988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KidsCube_M.prefab using Guid(b0fe3f8c777153641b762cc2a317a988) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3310e0738eeb9bf4eafb4eed9dc5619f') in 0.026181 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KidsCube_Q.prefab
+  artifactKey: Guid(e553bb1f28d5f7441a364f1adb0bd0e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KidsCube_Q.prefab using Guid(e553bb1f28d5f7441a364f1adb0bd0e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd35ad3788f15ab95bc6c3dc1d01f9fab') in 0.0271489 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KidsCube_W.prefab
+  artifactKey: Guid(82bbee29cc0120b4aad230f9753b59f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KidsCube_W.prefab using Guid(82bbee29cc0120b4aad230f9753b59f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '009f8273a068f58d29d55baace6c8dfb') in 0.0236062 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KidsCube_U.prefab
+  artifactKey: Guid(04cee286df3cabf48b365aedbb23fdb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KidsCube_U.prefab using Guid(04cee286df3cabf48b365aedbb23fdb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6d1928d53b158c127e6be772dd433104') in 0.025163 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KidsCube_A.prefab
+  artifactKey: Guid(5af375af61fad404cb9ecd678bc64bff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KidsCube_A.prefab using Guid(5af375af61fad404cb9ecd678bc64bff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f16650a2fbda220ee369c554b54a71ba') in 0.0277948 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_HomeLamp_03.prefab
+  artifactKey: Guid(8861d859fa131a94aa6deb29053058cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_HomeLamp_03.prefab using Guid(8861d859fa131a94aa6deb29053058cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '206ea75e87dc252dee1f2c3c95cbea4d') in 0.0270062 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Homeplant_11.prefab
+  artifactKey: Guid(daec2da31a06471479c869b9d401962f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Homeplant_11.prefab using Guid(daec2da31a06471479c869b9d401962f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dc88c83f6a254cd33b23097670f175cf') in 0.0239695 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KitchenCabinet_02_F.prefab
+  artifactKey: Guid(e29fed39803512448a9a1a720d4c246d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KitchenCabinet_02_F.prefab using Guid(e29fed39803512448a9a1a720d4c246d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'acad3e3b19dbce05e50a78550062c775') in 0.0231679 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KitchenCabinet_02_M.prefab
+  artifactKey: Guid(50e3befa274b4834592f42670eab1ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KitchenCabinet_02_M.prefab using Guid(50e3befa274b4834592f42670eab1ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fd80072ebc487e2b5292a0635dacef0d') in 0.0253028 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000096 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KitchenShelf_01.prefab
+  artifactKey: Guid(a9fecd67448db494c9393efb70e6d2ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KitchenShelf_01.prefab using Guid(a9fecd67448db494c9393efb70e6d2ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7b14c3a96c6fbf2c8fcafb4c1e30c7e5') in 0.0227637 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_HomeTheater_02.prefab
+  artifactKey: Guid(57df82bc3ccfe344499a13dc4400ac61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_HomeTheater_02.prefab using Guid(57df82bc3ccfe344499a13dc4400ac61) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dd8e7970e792c3599e85cf8048adf403') in 0.0268732 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Nightstand_01.prefab
+  artifactKey: Guid(62d48be5c4655ae4e8e5e2750e7d3c03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Nightstand_01.prefab using Guid(62d48be5c4655ae4e8e5e2750e7d3c03) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '57127932fea9f2aeae00ffd010645124') in 0.0234846 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_OfficeChair_03.prefab
+  artifactKey: Guid(f805c1afa505ce449ad1bbc22ce52aed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_OfficeChair_03.prefab using Guid(f805c1afa505ce449ad1bbc22ce52aed) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aac0b34ceb4c9a5237f320ab155bbb14') in 0.0220226 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Paint_01.prefab
+  artifactKey: Guid(1611636b689b34a4d8adb634ee304705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Paint_01.prefab using Guid(1611636b689b34a4d8adb634ee304705) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd0bc172e08d2102b6137018eac287d42') in 0.0322656 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Paint_08.prefab
+  artifactKey: Guid(04dd99f49c1492d49847917e762e5f53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Paint_08.prefab using Guid(04dd99f49c1492d49847917e762e5f53) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '842555afae5a4b4a92144f46d7b7585b') in 0.024959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Mirror_02.prefab
+  artifactKey: Guid(8fa2124e52ae2ad4e8cd2ea99f019894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Mirror_02.prefab using Guid(8fa2124e52ae2ad4e8cd2ea99f019894) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd5aba3ca09c0e23d405f8665f292f261') in 0.0246978 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Pouffes_06.prefab
+  artifactKey: Guid(4e4ea366fc86420458c29220f6761751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Pouffes_06.prefab using Guid(4e4ea366fc86420458c29220f6761751) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8de7ee8264c114d622d86307bd01ffe7') in 0.0246822 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_ShapeSortingBlock_Polygon_01.prefab
+  artifactKey: Guid(e4dc9f87d48af0a4f96aac5f30749b3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_ShapeSortingBlock_Polygon_01.prefab using Guid(e4dc9f87d48af0a4f96aac5f30749b3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '535b9785c3b7d7aad65e077401cef8ed') in 0.0244936 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_ShapeSortingToy.prefab
+  artifactKey: Guid(c27f938d98f88cc49992e4940f5fbffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_ShapeSortingToy.prefab using Guid(c27f938d98f88cc49992e4940f5fbffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3e163edcb171169e324a9b16f293ac58') in 0.0266716 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Shelve_05.prefab
+  artifactKey: Guid(90a046def2ef22f4086e36500ba78a66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Shelve_05.prefab using Guid(90a046def2ef22f4086e36500ba78a66) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7c8da9d53729281df2c7be43bd1a509c') in 0.0256507 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Shelve_08.prefab
+  artifactKey: Guid(c3e554aab30859d43b89bfd180573de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Shelve_08.prefab using Guid(c3e554aab30859d43b89bfd180573de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '36e69e402ffa582ed2820d939cb921bd') in 0.0254572 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Sink_03.prefab
+  artifactKey: Guid(6a2878022fe5bb54a9a22f75a7439be9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Sink_03.prefab using Guid(6a2878022fe5bb54a9a22f75a7439be9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9d8f34889f0742439c34e7d0ee5a60f9') in 0.0261835 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Refrigerator_01.prefab
+  artifactKey: Guid(8b6d4c650c7ffff4abdab2f2c79873d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Refrigerator_01.prefab using Guid(8b6d4c650c7ffff4abdab2f2c79873d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b9c3f08b410f89d5c94796472a8b45ee') in 0.0274758 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Sofa_02_F.prefab
+  artifactKey: Guid(3e40bca8db210f947adaa5d227fa8f6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Sofa_02_F.prefab using Guid(3e40bca8db210f947adaa5d227fa8f6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '08c969a3050ea324a7d0dceac9044d20') in 0.0220166 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Sofa_03_D.prefab
+  artifactKey: Guid(d3e80c16bb1c8ac409f9a64833dbde15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Sofa_03_D.prefab using Guid(d3e80c16bb1c8ac409f9a64833dbde15) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '876a3ced54a66bdd2e28db0483ae8445') in 0.0270838 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Sofa_06_A.prefab
+  artifactKey: Guid(5cfcb2dcd389124489a4c21f3835b89f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Sofa_06_A.prefab using Guid(5cfcb2dcd389124489a4c21f3835b89f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '805a24b64c2e0f1c3aef1fca9e45f56f') in 0.0227111 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Sofa_01.prefab
+  artifactKey: Guid(3bc36d27fb36c2143af1eb403850a542) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Sofa_01.prefab using Guid(3bc36d27fb36c2143af1eb403850a542) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5a5d3f1b1256a13cda8ba61bd8f9ffbb') in 0.0222792 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KidsChair.prefab
+  artifactKey: Guid(bdd4b959ccae63c4eb04f340d0e91d5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KidsChair.prefab using Guid(bdd4b959ccae63c4eb04f340d0e91d5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a27e23f75e53eea2e6696fe2bbbdbee9') in 0.0260814 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Table_09.prefab
+  artifactKey: Guid(ed6b5e2d3a443844f84c6d8468332caa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Table_09.prefab using Guid(ed6b5e2d3a443844f84c6d8468332caa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a5df1eeff5733669f0068d42820c8356') in 0.0212978 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Table_14.prefab
+  artifactKey: Guid(a7a56e94137616b44ba24d1e4f670a63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Table_14.prefab using Guid(a7a56e94137616b44ba24d1e4f670a63) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fd282b79259a7e2f38fd21a1cc5f7aaa') in 0.0229751 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Table_19.prefab
+  artifactKey: Guid(d1a8c4171fb35c547958c4f44ba28941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Table_19.prefab using Guid(d1a8c4171fb35c547958c4f44ba28941) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd9c65be325a925c760868fe4dc02a224') in 0.0267965 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KidsCube_B.prefab
+  artifactKey: Guid(9cca36210d3f18a409b25fbd2a6b564c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KidsCube_B.prefab using Guid(9cca36210d3f18a409b25fbd2a6b564c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '24e875b5672a28dc51b8af6cff937f3b') in 0.0211777 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Beauty_08.prefab
+  artifactKey: Guid(d90e7481f7d980849a493aff5d8565dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Beauty_08.prefab using Guid(d90e7481f7d980849a493aff5d8565dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '704938e86c3ec7418c5dcc2556e046e4') in 0.0157808 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_ShapeSortingBlock_Oval.prefab
+  artifactKey: Guid(49bf59875ec36e24d8aa57b12a727e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_ShapeSortingBlock_Oval.prefab using Guid(49bf59875ec36e24d8aa57b12a727e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd6810380ed16549384da25393aa8c7fd') in 0.0247778 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_TrashCan_04.prefab
+  artifactKey: Guid(b6a0837e700c73c4a9f3ce45a924d894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_TrashCan_04.prefab using Guid(b6a0837e700c73c4a9f3ce45a924d894) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5017a0b7e3da6676846b731e39336b4e') in 0.030034 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Console_05.prefab
+  artifactKey: Guid(7a61af0c447087345aee8730e8016b66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Console_05.prefab using Guid(7a61af0c447087345aee8730e8016b66) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2b85c670a1af5bb49b0759ce8732f964') in 0.0281523 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Beauty_02.prefab
+  artifactKey: Guid(48f82f01890332642b6225abd5a2b0b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Beauty_02.prefab using Guid(48f82f01890332642b6225abd5a2b0b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '86d454186723547527a231c167208ebe') in 0.0188386 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Table_15.prefab
+  artifactKey: Guid(898fd78874ed4fd4696de421d80e4d8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Table_15.prefab using Guid(898fd78874ed4fd4696de421d80e4d8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ffceb3f84c7053e3942fdb0512bba143') in 0.0306439 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Homeplant_10.prefab
+  artifactKey: Guid(c521333f6e9337945a34a65d021d88ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Homeplant_10.prefab using Guid(c521333f6e9337945a34a65d021d88ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '823614309c980a2c34f1dde11c49b18e') in 0.0273331 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_TeddyBear_04.prefab
+  artifactKey: Guid(625b27705cf415242913c2cd454718e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_TeddyBear_04.prefab using Guid(625b27705cf415242913c2cd454718e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6e8c12d3a32e3e4a3b8015e999f8d387') in 0.0241736 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Shelve_03.prefab
+  artifactKey: Guid(3c2f8685cfebd5f42b9caea7a5c70414) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Shelve_03.prefab using Guid(3c2f8685cfebd5f42b9caea7a5c70414) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '56c74b6d249c09b4cc619adf10c23285') in 0.0238753 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_WallShelf_01.prefab
+  artifactKey: Guid(c4e5fa475642b764192e01f35df14769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_WallShelf_01.prefab using Guid(c4e5fa475642b764192e01f35df14769) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8f4e5b4dc058546bbf3420bee211f4fc') in 0.0265038 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_WallPlugin.prefab
+  artifactKey: Guid(25812bd490e91ce44908ab6131d57d58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_WallPlugin.prefab using Guid(25812bd490e91ce44908ab6131d57d58) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd4fa85dbd29aaf3f9e75e3579c61daae') in 0.020115 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_WallShelf_10.prefab
+  artifactKey: Guid(749c2a5748128554ca311af7d0cc8952) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_WallShelf_10.prefab using Guid(749c2a5748128554ca311af7d0cc8952) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dd0c64324b2c6c50aafa8a47ced711ab') in 0.024054 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Wardrobe_01.prefab
+  artifactKey: Guid(2d68c323a6a91d74facf8bd291581e6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Wardrobe_01.prefab using Guid(2d68c323a6a91d74facf8bd291581e6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '85e4c209acc15b6fe7938a243ad7ed1f') in 0.0258545 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KitchenShelf_02.prefab
+  artifactKey: Guid(86146fe8e1e34124b956c23d5184bc91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KitchenShelf_02.prefab using Guid(86146fe8e1e34124b956c23d5184bc91) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '31dff6fc00b83b03f71f7704ea168bb5') in 0.0264624 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Sofa_02_B.prefab
+  artifactKey: Guid(fc5dae08b5aee744ca1270f9d5dcd212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Sofa_02_B.prefab using Guid(fc5dae08b5aee744ca1270f9d5dcd212) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cc5e205ff6d7db88b69e71ffa43b6cbb') in 0.0281297 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Sofa_03_C.prefab
+  artifactKey: Guid(78de45f4f8be8e04ebb0ff2068a3625c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Sofa_03_C.prefab using Guid(78de45f4f8be8e04ebb0ff2068a3625c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f1379806838555a3c98090552830e59c') in 0.0291356 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Sink_02.prefab
+  artifactKey: Guid(23114291690960946b14a5bb259ae6d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Sink_02.prefab using Guid(23114291690960946b14a5bb259ae6d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5978875973ea3a03be7c8a76959a0c22') in 0.0269212 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Table_08.prefab
+  artifactKey: Guid(c495d8460b1f974498a2305cbdc0a517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Table_08.prefab using Guid(c495d8460b1f974498a2305cbdc0a517) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c5b6bc33ab2af9631e98de03c963eae5') in 0.0303704 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Sofa_06_D.prefab
+  artifactKey: Guid(6dae976ee728f814396e000fd2afdf56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Sofa_06_D.prefab using Guid(6dae976ee728f814396e000fd2afdf56) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8893558738c1a9c6927cb6b02a5ed120') in 0.026934 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_SmallStorageBox_01.prefab
+  artifactKey: Guid(48f270c9ce58e894f8655ac4d8853941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_SmallStorageBox_01.prefab using Guid(48f270c9ce58e894f8655ac4d8853941) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6cd5573d5ca0b309f930ca4a98c644b8') in 0.0233587 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Wardrobe_03.prefab
+  artifactKey: Guid(d35f1c668850a444289e4b4cff6283ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Wardrobe_03.prefab using Guid(d35f1c668850a444289e4b4cff6283ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c10466b3c9902775b6d76a34edd5cfc2') in 0.0224063 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Table_06.prefab
+  artifactKey: Guid(41d0bc9a43c41ac4daa46518db94cb1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Table_06.prefab using Guid(41d0bc9a43c41ac4daa46518db94cb1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ceb174f947e12bfb3d9c7ad65509cc44') in 0.0220355 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_GenericHandle_03.prefab
+  artifactKey: Guid(e407620f567fd804197c76ddd3edb277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_GenericHandle_03.prefab using Guid(e407620f567fd804197c76ddd3edb277) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '99ebdf3c467ac01adca139e73b57086a') in 0.0238924 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KidsClock.prefab
+  artifactKey: Guid(3f2b5850f354baa4ba3d794b4939b879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KidsClock.prefab using Guid(3f2b5850f354baa4ba3d794b4939b879) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cb1b4bf83aa61c3a6e4e957f6d2a58b3') in 0.0224112 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Shelve_01.prefab
+  artifactKey: Guid(ac11cfc429575ea4faf3e6c7b686c758) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Shelve_01.prefab using Guid(ac11cfc429575ea4faf3e6c7b686c758) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3945d61ee4c0a9fdb7919175fd9c024f') in 0.0270732 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Pouffes_01.prefab
+  artifactKey: Guid(3c9ebd4181c4bb1409d6fc790e32e0a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Pouffes_01.prefab using Guid(3c9ebd4181c4bb1409d6fc790e32e0a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ee75a47eb0bf0d6b54eda6845f6b980e') in 0.0277804 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KitchenCabinet_01_C.prefab
+  artifactKey: Guid(94b88ed5b3c59be47ad14ed208249931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KitchenCabinet_01_C.prefab using Guid(94b88ed5b3c59be47ad14ed208249931) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b200c966f0cb8e79ad63614c7a01a841') in 0.0284617 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_ThrowingDisk.prefab
+  artifactKey: Guid(0a3ba27b0b506164fa47f58f34204941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_ThrowingDisk.prefab using Guid(0a3ba27b0b506164fa47f58f34204941) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e33add7c021677e71cc6ecf902fa028c') in 0.0257538 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_TeddyBear_05.prefab
+  artifactKey: Guid(5ffa8ec27fcf036439322b0ef74ca02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_TeddyBear_05.prefab using Guid(5ffa8ec27fcf036439322b0ef74ca02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dbc12e32eabc0aa35883a971ee4c1f70') in 0.0273305 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Faucet_03.prefab
+  artifactKey: Guid(0234de9bd8e43b340bd1542b6dae6499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Faucet_03.prefab using Guid(0234de9bd8e43b340bd1542b6dae6499) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a272776081e0b00e9da7004002df227d') in 0.0248648 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Table_07.prefab
+  artifactKey: Guid(315167b772dc9154a8c4982fb45aaede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Table_07.prefab using Guid(315167b772dc9154a8c4982fb45aaede) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '66a8a3d4d936b432bfd1f28019876565') in 0.0278323 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_OfficeChair_02.prefab
+  artifactKey: Guid(1684937b26a2f70469a26d8569d58c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_OfficeChair_02.prefab using Guid(1684937b26a2f70469a26d8569d58c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fe70424845c161219f59be6b6e87e801') in 0.0237775 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Sofa_03_A.prefab
+  artifactKey: Guid(9dd054929012f0c4d9d7ffcab7907016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Sofa_03_A.prefab using Guid(9dd054929012f0c4d9d7ffcab7907016) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2cfb2685e1e6d1da211de2f7cd4d79c8') in 0.0255603 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Telephone.prefab
+  artifactKey: Guid(b95bfe9b76badbe47b2b7f910c57bffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Telephone.prefab using Guid(b95bfe9b76badbe47b2b7f910c57bffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '24016f511f9fb7b5aab1d431cb2e73f8') in 0.0273953 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Storage_01.prefab
+  artifactKey: Guid(018043cfabdde774ba9cce7ebdbca091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Storage_01.prefab using Guid(018043cfabdde774ba9cce7ebdbca091) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '255e17ec1786ef3588c2ed3bc08eb0ba') in 0.0263851 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_HomeLamp_01.prefab
+  artifactKey: Guid(e11aaa56ec9056545aee725ec26a574a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_HomeLamp_01.prefab using Guid(e11aaa56ec9056545aee725ec26a574a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '689828982310e11da3ff29190b4105a1') in 0.0233162 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_WallHanger_02.prefab
+  artifactKey: Guid(e6611c4ccbf11e74992c9f6f419bd980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_WallHanger_02.prefab using Guid(e6611c4ccbf11e74992c9f6f419bd980) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'afee89ccb4efbaf49911575c18b4b1dd') in 0.0276164 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Homeplant_08.prefab
+  artifactKey: Guid(17040e010b1c47746a9ad01ba1a57688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Homeplant_08.prefab using Guid(17040e010b1c47746a9ad01ba1a57688) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8f7408425e21c2f85c8865e5579961b8') in 0.0287722 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Bath_02.prefab
+  artifactKey: Guid(42de7c35d566d3b4c914d9598e027e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Bath_02.prefab using Guid(42de7c35d566d3b4c914d9598e027e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f3fc42bd656e7fedabb807f907dcec97') in 0.0187876 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Sofa_02_C.prefab
+  artifactKey: Guid(932c343dbd0ef0147a583d572e95e58b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Sofa_02_C.prefab using Guid(932c343dbd0ef0147a583d572e95e58b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b1b8ce1d7d9ac37d9a4a0af5991eb09e') in 0.0269519 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_ToyTrain_02.prefab
+  artifactKey: Guid(f5c81531944f6a043a045b781fc99b12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_ToyTrain_02.prefab using Guid(f5c81531944f6a043a045b781fc99b12) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '01d14d3eace10bc133e64e0dc23a0925') in 0.0256744 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_SmallStorageBox_03.prefab
+  artifactKey: Guid(27b060a62c1c69545b85707e90f85dc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_SmallStorageBox_03.prefab using Guid(27b060a62c1c69545b85707e90f85dc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3887c1a9c732fc77769087b56f1c487f') in 0.0266225 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Console_02.prefab
+  artifactKey: Guid(6e895ac7314252246a78dd4d457660a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Console_02.prefab using Guid(6e895ac7314252246a78dd4d457660a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bd7f8027e1080ec26a3afbe658092264') in 0.026921 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Sofa_06_F.prefab
+  artifactKey: Guid(d25993225393b804586fd46f78dfa248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Sofa_06_F.prefab using Guid(d25993225393b804586fd46f78dfa248) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '69b6fefe47fe25a150c0eb80de2b1267') in 0.0242859 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Beauty_05.prefab
+  artifactKey: Guid(02f5ce050695735468679fd5d4e9cdf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Beauty_05.prefab using Guid(02f5ce050695735468679fd5d4e9cdf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5dcf2a216f2e9f3cb433ad5e5d348d1c') in 0.0196864 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Towel_01.prefab
+  artifactKey: Guid(f851d86f5f454c349abb7d2a780f7829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Towel_01.prefab using Guid(f851d86f5f454c349abb7d2a780f7829) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ed94ddcc4ea3ceb46122316e378dca63') in 0.0275138 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_ToyTrain_01.prefab
+  artifactKey: Guid(9457934fe0c66914a9b0e7dcadac76fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_ToyTrain_01.prefab using Guid(9457934fe0c66914a9b0e7dcadac76fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'df82f5d06babef610777cf576f516822') in 0.0257778 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_WaterDrain.prefab
+  artifactKey: Guid(bfacbef2bd9c7774f89c2e8edbecbda9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_WaterDrain.prefab using Guid(bfacbef2bd9c7774f89c2e8edbecbda9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0d416aa148921a8937ad1fff571997fb') in 0.0301573 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Table_05.prefab
+  artifactKey: Guid(4ccbd0316b6b9714c8810954bb035dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Table_05.prefab using Guid(4ccbd0316b6b9714c8810954bb035dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6f0ca6f4cb617ea4a842e596928877e4') in 0.0302939 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Table_18.prefab
+  artifactKey: Guid(10f630f606d05c44281a065fed56818a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Table_18.prefab using Guid(10f630f606d05c44281a065fed56818a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5ac11b1fd9856db246136074e74c4254') in 0.0256384 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_WallShelf_09.prefab
+  artifactKey: Guid(532b083a09454d849a545ec02bb1a7e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_WallShelf_09.prefab using Guid(532b083a09454d849a545ec02bb1a7e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ffbecf386868d3c0b290877084831d40') in 0.0255488 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_WorkoutMat_01.prefab
+  artifactKey: Guid(7dc08dd1d2e3a3441b1a3acb353274bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_WorkoutMat_01.prefab using Guid(7dc08dd1d2e3a3441b1a3acb353274bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '23c04e5d6716e69dcc809f62119b1ebd') in 0.0239114 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Faucet_06.prefab
+  artifactKey: Guid(58d3f816dca80134d879f1e54805f19e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Faucet_06.prefab using Guid(58d3f816dca80134d879f1e54805f19e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6dfff2ca3918ebecf3c644d2ce4dd565') in 0.0246988 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Shelve_14.prefab
+  artifactKey: Guid(e1cfcdb6fffaca7419576a382a3a9157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Shelve_14.prefab using Guid(e1cfcdb6fffaca7419576a382a3a9157) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2630d938bab5cf394917984fde333808') in 0.026296 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Table_12.prefab
+  artifactKey: Guid(b98b49a80899f0248912c41a7a5d4b38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Table_12.prefab using Guid(b98b49a80899f0248912c41a7a5d4b38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a5bcce2f7c04ac7809502358b25168da') in 0.0233873 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KidsCube_H.prefab
+  artifactKey: Guid(9f819bef6687eea4fa62c2aceeda22ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KidsCube_H.prefab using Guid(9f819bef6687eea4fa62c2aceeda22ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7169d0f1dccf67a782733c02a68d6377') in 0.0275465 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_ShapeSortingBlock_Cube.prefab
+  artifactKey: Guid(0dde478918548294e8ebc4b7b7ef9859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_ShapeSortingBlock_Cube.prefab using Guid(0dde478918548294e8ebc4b7b7ef9859) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0456468382fbf83eb702cd0e6ea18114') in 0.0228581 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Homeplant_02.prefab
+  artifactKey: Guid(ab4bb5778e2aea64d8afbe6ccff09798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Homeplant_02.prefab using Guid(ab4bb5778e2aea64d8afbe6ccff09798) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0107ff600fa9a698c0bebc5cfab3ede7') in 0.0259604 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Microwave_01.prefab
+  artifactKey: Guid(e23434abf520b32469ce044b2afd58ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Microwave_01.prefab using Guid(e23434abf520b32469ce044b2afd58ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f34d2ee87c61b21d97e99ee2c223011e') in 0.0275621 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KitchenShelf_03.prefab
+  artifactKey: Guid(5620d8cda8f8ff643afa3b55bf8a72c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KitchenShelf_03.prefab using Guid(5620d8cda8f8ff643afa3b55bf8a72c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1607eef146e31d8463dd6c0c5c7a1f2c') in 0.0273084 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_ShapeSortingBlock_Rectangle.prefab
+  artifactKey: Guid(44586ce05d2c2874e955d93fd00549e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_ShapeSortingBlock_Rectangle.prefab using Guid(44586ce05d2c2874e955d93fd00549e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0279f0047915d876be2880036dc70ec2') in 0.0246226 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Sofa_06_C.prefab
+  artifactKey: Guid(c03fc7a19c7314c4babd046bfdfd0a4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Sofa_06_C.prefab using Guid(c03fc7a19c7314c4babd046bfdfd0a4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '477d6c239b85e53b0924f818a5505224') in 0.0275214 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_PictureFrame_01.prefab
+  artifactKey: Guid(e71fd30b99eb17941b906ddf1aa38509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_PictureFrame_01.prefab using Guid(e71fd30b99eb17941b906ddf1aa38509) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '05fa5bd26e5d11377dc492f117eab6fd') in 0.0247704 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Shelve_02.prefab
+  artifactKey: Guid(a4cb1053db319414699a1dff5dfd9ef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Shelve_02.prefab using Guid(a4cb1053db319414699a1dff5dfd9ef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '070908d7d858d55d3f69e18381ba0663') in 0.0250248 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_WallShelf_08.prefab
+  artifactKey: Guid(fb3ee80fd4c958d42b57aff18628d442) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_WallShelf_08.prefab using Guid(fb3ee80fd4c958d42b57aff18628d442) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a47317d3671731c30c5b0a34c87b0934') in 0.027168 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Shelve_13.prefab
+  artifactKey: Guid(8ebf8a48f840d464082061e70a785811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Shelve_13.prefab using Guid(8ebf8a48f840d464082061e70a785811) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '714e8a94949779a189858ecf3279bb50') in 0.0272944 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Mirror_01.prefab
+  artifactKey: Guid(43370f2e01c86b048945ae33be0ce755) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Mirror_01.prefab using Guid(43370f2e01c86b048945ae33be0ce755) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '26bdef8abd77b0d96a7217b77fdb41a2') in 0.0279131 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Sofa_03_B.prefab
+  artifactKey: Guid(358f10e27271ff14db8565b6ced7ed5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Sofa_03_B.prefab using Guid(358f10e27271ff14db8565b6ced7ed5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bdaba1cf805062ba5f92fb07cbcbb0c7') in 0.030192 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Table_17.prefab
+  artifactKey: Guid(396d07c3645624241ace99abaeb6d520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Table_17.prefab using Guid(396d07c3645624241ace99abaeb6d520) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9cf129dc81ca001b14cf60db7517645c') in 0.0279882 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Microwave_03.prefab
+  artifactKey: Guid(8776374befdb4a84dba81ae67dc9d29d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Microwave_03.prefab using Guid(8776374befdb4a84dba81ae67dc9d29d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '81ff417634bd07c3a00bbbdb66b89b9c') in 0.0294623 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_TrashCan_02.prefab
+  artifactKey: Guid(c37ec82a1cd565f49a1171702fb5821e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_TrashCan_02.prefab using Guid(c37ec82a1cd565f49a1171702fb5821e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cd6933039ee4749023cbe2ed22189a0f') in 0.0298113 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Sofa_02_A.prefab
+  artifactKey: Guid(b14969f5c6066c6449c7cf670dce87a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Sofa_02_A.prefab using Guid(b14969f5c6066c6449c7cf670dce87a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e766c483e4600c765c2c924893d8e9e5') in 0.0273712 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_ToyTrain_04.prefab
+  artifactKey: Guid(fbc18c765909c8b4bad92235730aa478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_ToyTrain_04.prefab using Guid(fbc18c765909c8b4bad92235730aa478) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b6f41a4df72ea8258df14bcebb37a29a') in 0.0318274 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_WallHanger_03.prefab
+  artifactKey: Guid(149100c91951405448785b677e7475a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_WallHanger_03.prefab using Guid(149100c91951405448785b677e7475a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f2cba8b82afed4135ad4d0b94d693219') in 0.02806 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_HulaHoop_03.prefab
+  artifactKey: Guid(38fc058efd0077047ae14b565f48d406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_HulaHoop_03.prefab using Guid(38fc058efd0077047ae14b565f48d406) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a5d76fca284a5a542660b53a3478c4eb') in 0.0256273 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_TowelRails_01.prefab
+  artifactKey: Guid(7e2106ef1068bf84688510cc18d86bc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_TowelRails_01.prefab using Guid(7e2106ef1068bf84688510cc18d86bc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '024bcc50ac113d4be28ecf679963d090') in 0.0248828 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_WaterDispenser.prefab
+  artifactKey: Guid(930b2b6c70bb2ee4a8c39ef57c51ed02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_WaterDispenser.prefab using Guid(930b2b6c70bb2ee4a8c39ef57c51ed02) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1aeef83aec4cc30bdf90a4090730123b') in 0.0301194 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_HulaHoop_02.prefab
+  artifactKey: Guid(b867725f0364de34fbd8a2984d047cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_HulaHoop_02.prefab using Guid(b867725f0364de34fbd8a2984d047cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4a82f2571a721348c4756d26adca86d5') in 0.0316366 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_GenericPillow_01.prefab
+  artifactKey: Guid(91a8deccd62eada41bfaeebe619a93bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_GenericPillow_01.prefab using Guid(91a8deccd62eada41bfaeebe619a93bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b435faec65b7bec73b3de8293b10af72') in 0.0271255 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Shelve_09.prefab
+  artifactKey: Guid(e601b705a6226b44ca5b28b3746c9175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Shelve_09.prefab using Guid(e601b705a6226b44ca5b28b3746c9175) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a447b675b1614bce7a01ff027b8c9de4') in 0.0276107 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KitchenCabinet_02_A.prefab
+  artifactKey: Guid(0d531f9ec2442a04a81e06af15269f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KitchenCabinet_02_A.prefab using Guid(0d531f9ec2442a04a81e06af15269f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ff6257dd6fc0ff62620cb9ec453d0040') in 0.0275201 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KitchenCabinet_02_N.prefab
+  artifactKey: Guid(b711e0f039be022438f22f21ececc7e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KitchenCabinet_02_N.prefab using Guid(b711e0f039be022438f22f21ececc7e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '380c9fe27ccd83a9893b1fa847b8e2e7') in 0.027323 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_WallShelf_02.prefab
+  artifactKey: Guid(78fac79500a5c1748b9395e11a69d37d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_WallShelf_02.prefab using Guid(78fac79500a5c1748b9395e11a69d37d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '751a04bd3a1f65e65244f4bfcb6f99c9') in 0.0280514 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Paint_07.prefab
+  artifactKey: Guid(247c8f6b69cd7fd49a96d963ed8afbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Paint_07.prefab using Guid(247c8f6b69cd7fd49a96d963ed8afbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b12b5432bfb586de8d04a9f06c1bf68f') in 0.0273252 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KitchenShelf_05.prefab
+  artifactKey: Guid(b535ae532593fce41b933739fd1ef988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KitchenShelf_05.prefab using Guid(b535ae532593fce41b933739fd1ef988) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '63699aae6903c88a090cc8479987eb3a') in 0.0276478 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Pouffes_07.prefab
+  artifactKey: Guid(4c69c213514274f46b47c91794abeb64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Pouffes_07.prefab using Guid(4c69c213514274f46b47c91794abeb64) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e166b9dc62a6200f0177bc2fb3925112') in 0.0263325 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Table_01.prefab
+  artifactKey: Guid(9d530da0392d50b4698082be570f2c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Table_01.prefab using Guid(9d530da0392d50b4698082be570f2c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '07b8cccf462bee774efc26ed9db432b0') in 0.0281325 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Paint_02.prefab
+  artifactKey: Guid(a0d35adfa623ffe4cb4749541a41fca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Paint_02.prefab using Guid(a0d35adfa623ffe4cb4749541a41fca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0da6156be35be882b4b99a174b87da90') in 0.0296289 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Console_01.prefab
+  artifactKey: Guid(130e1d3f517529c48866d451ac40c395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Console_01.prefab using Guid(130e1d3f517529c48866d451ac40c395) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1756b24deea7f19c0a122898a65218e7') in 0.0271473 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Table_13.prefab
+  artifactKey: Guid(55430e238b7bb1b42b685a674ff555b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Table_13.prefab using Guid(55430e238b7bb1b42b685a674ff555b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd5513bcacd601bff9fb9055261321a49') in 0.0309016 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Chair_03.prefab
+  artifactKey: Guid(d4be6e6b191f4784f9592ab952f52670) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Chair_03.prefab using Guid(d4be6e6b191f4784f9592ab952f52670) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f871b01f964c102b6932355799dc1709') in 0.0268931 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Cabinet_02.prefab
+  artifactKey: Guid(3ac025297b975ce4fae03053cc8eb34a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Cabinet_02.prefab using Guid(3ac025297b975ce4fae03053cc8eb34a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '386955166a3a819e88fd33bd7269b003') in 0.0182753 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Chair_06.prefab
+  artifactKey: Guid(2a0e4ed0bbbcbb644bdb078788e7bd77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Chair_06.prefab using Guid(2a0e4ed0bbbcbb644bdb078788e7bd77) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '04571da5673a2ec2920d38f567e3144f') in 0.0268763 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KidsCube_G.prefab
+  artifactKey: Guid(3728cdc028320a04692a0d3c523a4e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KidsCube_G.prefab using Guid(3728cdc028320a04692a0d3c523a4e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0b954dab4204a9338e13801fbaec2978') in 0.0255018 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Chair_01.prefab
+  artifactKey: Guid(ab68eec296106bc488f0fb51fb175389) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Chair_01.prefab using Guid(ab68eec296106bc488f0fb51fb175389) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8548d3f211a9dbc4ed0e445fa6ef9f9a') in 0.0241764 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_KidsCube_X.prefab
+  artifactKey: Guid(4c0cafb86cc108b4683d80eb0d463707) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_KidsCube_X.prefab using Guid(4c0cafb86cc108b4683d80eb0d463707) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c97dbc89ab1c479ce3a64ae7b7629153') in 0.0280556 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Homeplant_06.prefab
+  artifactKey: Guid(340b2ccae55b1b640a06cb0df0519b92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Homeplant_06.prefab using Guid(340b2ccae55b1b640a06cb0df0519b92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5c73990521b987611a6911a041e7498d') in 0.0263492 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_Bath_03.prefab
+  artifactKey: Guid(4e2b46211d6514d47b1a810fb4e75244) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_Bath_03.prefab using Guid(4e2b46211d6514d47b1a810fb4e75244) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '94ce351cd9744b60fa73d2129aab4095') in 0.0179557 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_ToyTrain_05.prefab
+  artifactKey: Guid(5aa0fa2f0ae58574fbb4cc0840a150b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_ToyTrain_05.prefab using Guid(5aa0fa2f0ae58574fbb4cc0840a150b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e0064850306b5551092ae634030c978c') in 0.0278221 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PandazoleHome/Prefabs/Prop_TowelRails_02.prefab
+  artifactKey: Guid(75c64a2c73abaa64cbe1acbc1f72a457) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Prefabs/Prop_TowelRails_02.prefab using Guid(75c64a2c73abaa64cbe1acbc1f72a457) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '006fea4bef80aac147f67f901ada21f1') in 0.025033 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.838252 seconds.
+  path: Assets/PandazoleHome/Models/Prop_Chair_04.fbx
+  artifactKey: Guid(0de699b60db44be49b073c1301df23d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Models/Prop_Chair_04.fbx using Guid(0de699b60db44be49b073c1301df23d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '92d174a6e58f82d98711bbe7bd940027') in 0.060575 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/PandazoleHome/Models/Prop_Chair_06.fbx
+  artifactKey: Guid(ff544276d5a8cf344ae572d636cd28fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Models/Prop_Chair_06.fbx using Guid(ff544276d5a8cf344ae572d636cd28fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '974b9f76d83d9a14f2a2abedbc59ab6b') in 0.0238612 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/PandazoleHome/Models/Prop_Console_01.fbx
+  artifactKey: Guid(3ab75435cfdfcbc4f847f6eeaa46df93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Models/Prop_Console_01.fbx using Guid(3ab75435cfdfcbc4f847f6eeaa46df93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1f3cdad12e0d33c182306baca52defb9') in 0.0177485 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/PandazoleHome/Models/Prop_Chair_05.fbx
+  artifactKey: Guid(2c498905c27355d459377aa695663458) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Models/Prop_Chair_05.fbx using Guid(2c498905c27355d459377aa695663458) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '70157f54de902d96fd07d93427a558b0') in 0.01793 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/PandazoleHome/Models/Prop_Chest.fbx
+  artifactKey: Guid(c4b1dca2cbae4d64e88870c00448afaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PandazoleHome/Models/Prop_Chest.fbx using Guid(c4b1dca2cbae4d64e88870c00448afaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '897db1ff913f24074e6900e74b078a2f') in 0.0180105 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

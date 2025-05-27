@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,8 +20,8 @@ public class PlayerController : MonoBehaviour
     public Transform cameraTransform;
 
     [Header("Stats")]
-    public float maxHealth = 1f;
-    public float currentHealth;
+    public int maxHealth = 3;
+    public int currentHealth;
 
     public float maxStamina = 100f;
     public float currentStamina;
@@ -30,6 +31,8 @@ public class PlayerController : MonoBehaviour
 
     private bool isSprintingBlocked = false;
     private float staminaRegenTimer;
+
+    private bool isInvincible = false;
 
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private InputActionAsset inputActions;
@@ -42,6 +45,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 originalCamPos;
     private float targetHeight;
     private Vector3 targetCamPos;
+    private Vector3 spawnPosition;
 
     private Vector2 moveInput;
     private Vector2 lookInput;
@@ -58,6 +62,8 @@ public class PlayerController : MonoBehaviour
 
         originalCamPos = cameraTransform.localPosition;
         targetCamPos = originalCamPos;
+
+        spawnPosition = transform.position;
 
         // Reference actions
         move = inputActions["Move"];
@@ -110,7 +116,10 @@ public class PlayerController : MonoBehaviour
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
         Vector3 velocity = move.normalized * currentSpeed;
         velocity.y = rb.linearVelocity.y;
-        rb.linearVelocity = velocity;
+        if (!rb.isKinematic)
+        {
+            rb.linearVelocity = velocity;
+        }
     }
 
     void HandleLook()
@@ -191,20 +200,46 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics.Raycast(origin, Vector3.down, col.bounds.extents.y + checkDistance);
     }
 
-    public void TakeDamage(float amount)
+    public void TakeDamage(int amount)
     {
+        if (isInvincible) return;
         currentHealth -= amount;
 
-        if (currentHealth <= 0)
-        {
-            currentHealth = 0;
+        if (currentHealth > 0)
+            StartCoroutine(RespawnAfterDelay(0.5f)); // shorter delay
+        else
             Die();
-        }
-    }
-    void Die()
-    {
-        Debug.Log("Player died.");
-        // Add respawn or game over logic here
+        
     }
 
+    void Die()
+    {
+        Debug.Log("Player died — all health lost.");
+        StartCoroutine(RestartLevel());
+    }
+
+    private IEnumerator RespawnAfterDelay(float delay)
+    {
+        isInvincible = true;
+
+        rb.isKinematic = true;
+        yield return new WaitForSeconds(delay);
+        rb.isKinematic = false;
+        rb.linearVelocity = Vector3.zero;
+
+        transform.position = spawnPosition;
+
+        rb.isKinematic = false;
+        Debug.Log("Player respawned.");
+    }
+
+    private IEnumerator RestartLevel()
+    {
+        rb.linearVelocity = Vector3.zero;
+        rb.isKinematic = true;
+
+        yield return new WaitForSeconds(2f);
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Restart");
+    }
 }

@@ -15,7 +15,7 @@ C:/Users/Caelyn/Documents/GitHub/iwp/iwp test
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61897
+58800
 -job-worker-count
 9
 -background-job-worker-count
@@ -59,12 +59,12 @@ C:/Users/Caelyn/Documents/GitHub/iwp/iwp test
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [30348]  Target information:
+Player connection [28744]  Target information:
 
-Player connection [30348]  * "[IP] 192.168.1.25 [Port] 0 [Flags] 2 [Guid] 2620238019 [EditorId] 2620238019 [Version] 1048832 [Id] WindowsEditor(7,??) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [28744]  * "[IP] 192.168.1.25 [Port] 0 [Flags] 2 [Guid] 3516400323 [EditorId] 3516400323 [Version] 1048832 [Id] WindowsEditor(7,??) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [30348] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [30348] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [28744] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [28744] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 9
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -76,7 +76,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 146.12 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.64 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.47f1 (2ad1ed33fd3b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/Resources/UnitySubsystems
@@ -92,46 +92,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56364
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56064
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Registered in 0.011581 seconds.
-- Loaded All Assemblies, in  3.416 seconds
+Registered in 0.004255 seconds.
+- Loaded All Assemblies, in  0.450 seconds
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 433 ms
+Android Extension - Scanning For ADB Devices 402 ms
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.144 seconds
-Domain Reload Profiling: 4555ms
-	BeginReloadAssembly (651ms)
+- Finished resetting the current domain, in  0.852 seconds
+Domain Reload Profiling: 1300ms
+	BeginReloadAssembly (138ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (534ms)
-	RebuildNativeTypeToScriptingClass (23ms)
-	initialDomainReloadingComplete (103ms)
-	LoadAllAssembliesAndSetupDomain (2099ms)
-		LoadAssemblies (644ms)
+	RebuildCommonClasses (46ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (61ms)
+	LoadAllAssembliesAndSetupDomain (190ms)
+		LoadAssemblies (137ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (2091ms)
-			TypeCache.Refresh (2089ms)
-				TypeCache.ScanAssembly (1560ms)
+		AnalyzeDomain (185ms)
+			TypeCache.Refresh (183ms)
+				TypeCache.ScanAssembly (169ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (1145ms)
+	FinalizeReload (853ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1059ms)
+		SetupLoadedEditorAssemblies (794ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (594ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (96ms)
-			ProcessInitializeOnLoadAttributes (221ms)
-			ProcessInitializeOnLoadMethodAttributes (142ms)
+			InitializePlatformSupportModulesInManaged (495ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (57ms)
+			ProcessInitializeOnLoadAttributes (157ms)
+			ProcessInitializeOnLoadMethodAttributes (80ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -143,11 +143,11 @@ Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.832 seconds
+- Loaded All Assemblies, in  0.919 seconds
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 2.56 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.18 ms, found 3 plugins.
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
@@ -156,132 +156,245 @@ Package Manager log level set to [2]
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.426 seconds
-Domain Reload Profiling: 6249ms
-	BeginReloadAssembly (325ms)
+- Finished resetting the current domain, in  0.869 seconds
+Domain Reload Profiling: 1782ms
+	BeginReloadAssembly (187ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (12ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (49ms)
-	RebuildCommonClasses (72ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (84ms)
-	LoadAllAssembliesAndSetupDomain (3320ms)
-		LoadAssemblies (2751ms)
+		CreateAndSetChildDomain (37ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (622ms)
+		LoadAssemblies (409ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (765ms)
-			TypeCache.Refresh (638ms)
-				TypeCache.ScanAssembly (520ms)
-			BuildScriptInfoCaches (100ms)
-			ResolveRequiredComponents (21ms)
-	FinalizeReload (2427ms)
+		AnalyzeDomain (321ms)
+			TypeCache.Refresh (229ms)
+				TypeCache.ScanAssembly (208ms)
+			BuildScriptInfoCaches (70ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (869ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1495ms)
+		SetupLoadedEditorAssemblies (664ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (24ms)
-			SetLoadedEditorAssemblies (10ms)
-			BeforeProcessingInitializeOnLoad (195ms)
-			ProcessInitializeOnLoadAttributes (730ms)
-			ProcessInitializeOnLoadMethodAttributes (523ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (122ms)
+			ProcessInitializeOnLoadAttributes (430ms)
+			ProcessInitializeOnLoadMethodAttributes (84ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 1.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 218 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6351 unused Assets / (5.5 MB). Loaded Objects now: 7058.
+Memory consumption went from 173.5 MB to 168.0 MB.
+Total: 13.613100 ms (FindLiveObjects: 0.820200 ms CreateObjectMapping: 1.006000 ms MarkObjects: 7.066800 ms  DeleteObjects: 4.713600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 573.819853 seconds.
+  path: Assets/FreeLowPolyRobot/Scripts/ModularRobotRandomizer.cs
+  artifactKey: Guid(547a3a5865c201e42b933cbf702a40ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeLowPolyRobot/Scripts/ModularRobotRandomizer.cs using Guid(547a3a5865c201e42b933cbf702a40ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7665ae2d9a353d089c81669124886696') in 0.007327 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/FreeLowPolyRobot/Materials
+  artifactKey: Guid(f33de60d7d63e8241bfd4353cf29d6c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeLowPolyRobot/Materials using Guid(f33de60d7d63e8241bfd4353cf29d6c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '80a49d38858ea97159f3bb85feea7552') in 0.0008603 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/FreeLowPolyRobot/Scripts
+  artifactKey: Guid(dfc4ba427c49b474d96bfbb5ab5f95c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeLowPolyRobot/Scripts using Guid(dfc4ba427c49b474d96bfbb5ab5f95c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '05f77d8e06c032ecd6f6fe5ceb534da2') in 0.0009122 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/FreeLowPolyRobot/Materials/M_AtlasUnlit.mat
+  artifactKey: Guid(dbbca0ba16fb11e459896289f30f3d7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeLowPolyRobot/Materials/M_AtlasUnlit.mat using Guid(dbbca0ba16fb11e459896289f30f3d7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '78745dbc2093e9b33a87973cbb314b17') in 0.6171814 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/FreeLowPolyRobot/Scenes/Sc_FreeRobotSample.unity
+  artifactKey: Guid(60a3b77abd0cea54d87caf47eb5e1e1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeLowPolyRobot/Scenes/Sc_FreeRobotSample.unity using Guid(60a3b77abd0cea54d87caf47eb5e1e1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e67fb9a8e36e1dae65c2f1366f57fffa') in 0.0007216 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/FreeLowPolyRobot/Materials/T_ColorAtlas.png
+  artifactKey: Guid(270ff6e62b9d9124a80636ce8a7cfc1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeLowPolyRobot/Materials/T_ColorAtlas.png using Guid(270ff6e62b9d9124a80636ce8a7cfc1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'da1dcb94b7c35dab894bc994de946150') in 0.0244473 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/FreeLowPolyRobot/Materials/M_AtlasBase.mat
+  artifactKey: Guid(8536272d3f22c2d43aeb3d99746c647b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeLowPolyRobot/Materials/M_AtlasBase.mat using Guid(8536272d3f22c2d43aeb3d99746c647b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c567c2c05630a88e38b2c40d7b2b67fd') in 0.0249424 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/FreeLowPolyRobot/Scenes
+  artifactKey: Guid(553d5d0903ed8924196f9e10d18a4972) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeLowPolyRobot/Scenes using Guid(553d5d0903ed8924196f9e10d18a4972) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0b0c96691eb0ac50fe6bc9713a8ac830') in 0.0009776 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/FreeLowPolyRobot/Materials/M_AtlasEmissive.mat
+  artifactKey: Guid(2720665c21f05274db9141f181e17de4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeLowPolyRobot/Materials/M_AtlasEmissive.mat using Guid(2720665c21f05274db9141f181e17de4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4c93c6b73bd1d6434f377db1667039b6') in 2.8202461 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.789109 seconds.
+  path: Assets/FreeLowPolyRobot/Meshes_and_Animations/Modular_Parts.prefab
+  artifactKey: Guid(4a42ddd97c213fb438713a335cfe0db7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreeLowPolyRobot/Meshes_and_Animations/Modular_Parts.prefab using Guid(4a42ddd97c213fb438713a335cfe0db7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6edb551027596a888d6241d26845541c') in 3.5092496 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 42
+
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.661 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.828 seconds
+Domain Reload Profiling: 1489ms
+	BeginReloadAssembly (189ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (17ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (53ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (405ms)
+		LoadAssemblies (322ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (160ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (139ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (828ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (644ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (120ms)
+			ProcessInitializeOnLoadAttributes (431ms)
+			ProcessInitializeOnLoadMethodAttributes (69ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Refreshing native plugins compatible for Editor in 1.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6348 unused Assets / (4.3 MB). Loaded Objects now: 7141.
+Memory consumption went from 166.5 MB to 162.3 MB.
+Total: 10.531600 ms (FindLiveObjects: 0.675000 ms CreateObjectMapping: 0.863900 ms MarkObjects: 6.118300 ms  DeleteObjects: 2.872900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.654 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.737 seconds
+Domain Reload Profiling: 1389ms
+	BeginReloadAssembly (171ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (44ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (411ms)
+		LoadAssemblies (332ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (162ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (141ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (737ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (568ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (108ms)
+			ProcessInitializeOnLoadAttributes (364ms)
+			ProcessInitializeOnLoadMethodAttributes (67ms)
 			AfterProcessingInitializeOnLoad (12ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 2.60 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 1.60 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 217 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6349 unused Assets / (5.0 MB). Loaded Objects now: 7055.
-Memory consumption went from 167.0 MB to 162.0 MB.
-Total: 15.576100 ms (FindLiveObjects: 0.787600 ms CreateObjectMapping: 1.054200 ms MarkObjects: 9.082100 ms  DeleteObjects: 4.648500 ms)
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6347 unused Assets / (4.7 MB). Loaded Objects now: 7143.
+Memory consumption went from 164.7 MB to 160.0 MB.
+Total: 11.334900 ms (FindLiveObjects: 0.828200 ms CreateObjectMapping: 0.986900 ms MarkObjects: 6.528900 ms  DeleteObjects: 2.989300 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 6443.757200 seconds.
-  path: Assets/low-poly-door/textures/Wood027_2K_Color.jpeg
-  artifactKey: Guid(49888e5dc55d85c4bb2a58ef578f7e53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/low-poly-door/textures/Wood027_2K_Color.jpeg using Guid(49888e5dc55d85c4bb2a58ef578f7e53) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '65020e9a609cea8956f2b9387c5e99d2') in 0.1395342 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/low-poly-door/textures
-  artifactKey: Guid(84982944827e1094fad70d2d108a3676) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/low-poly-door/textures using Guid(84982944827e1094fad70d2d108a3676) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3d85a20295c101e292b0a102a98ca9f5') in 0.0019001 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 784.920868 seconds.
-  path: Assets/Prefabs/CheckeredGround.prefab
-  artifactKey: Guid(3040f12e68d028c4bab5e5c818da0050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/CheckeredGround.prefab using Guid(3040f12e68d028c4bab5e5c818da0050) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9b142c56cee0f2daa51edc769586bc5a') in 0.4581032 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 25.804370 seconds.
-  path: Assets/Puppet Kid
-  artifactKey: Guid(14bf6c35f0f74cc42829d7a64a90b89f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Puppet Kid using Guid(14bf6c35f0f74cc42829d7a64a90b89f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f04382b43bad1a0877fc378f7f7d8448') in 0.0008866 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.181024 seconds.
-  path: Assets/Puppet Kid/Models
-  artifactKey: Guid(0604d87291fb4dc4fa9c348f3f3764b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Puppet Kid/Models using Guid(0604d87291fb4dc4fa9c348f3f3764b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7867a4ee06f478145bf8184f927f69ba') in 0.0007727 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.036228 seconds.
-  path: Assets/Puppet Kid/Materials/puppet kid grey shirt.mat
-  artifactKey: Guid(2d9352a1bb4358948ad175c5c171108c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Puppet Kid/Materials/puppet kid grey shirt.mat using Guid(2d9352a1bb4358948ad175c5c171108c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5808d485b485720c09b4456ce1f6872b') in 0.0454852 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/Puppet Kid/Materials/puppet kid red hair.mat
-  artifactKey: Guid(16301c8556c91ff448de26f69ee2bff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Puppet Kid/Materials/puppet kid red hair.mat using Guid(16301c8556c91ff448de26f69ee2bff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '99b21947fd324150663b16988bc1cf8e') in 0.0179102 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 442.919093 seconds.
-  path: Assets/PandazoleHome/Prefabs/Ground Bases/Prop_GroundBase_01.prefab
-  artifactKey: Guid(ed0c0750d2e1b2f4bb772c2a28fac506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PandazoleHome/Prefabs/Ground Bases/Prop_GroundBase_01.prefab using Guid(ed0c0750d2e1b2f4bb772c2a28fac506) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0ea5078e9162bc56747b2fb63ca73b13') in 0.0262505 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/PandazoleHome/Prefabs/Ground Bases/Prop_GroundBase_03.prefab
-  artifactKey: Guid(727dc2e660b06e44285d3db58cc20b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PandazoleHome/Prefabs/Ground Bases/Prop_GroundBase_03.prefab using Guid(727dc2e660b06e44285d3db58cc20b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0831a34caf690bcbe0f7eaef5053ee0e') in 0.0271389 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/PandazoleHome/Prefabs/Ground Bases/Prop_GroundBase_08.prefab
-  artifactKey: Guid(09aa0d24a2f1fb7448da901b9037914e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PandazoleHome/Prefabs/Ground Bases/Prop_GroundBase_08.prefab using Guid(09aa0d24a2f1fb7448da901b9037914e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ff54da61420164033813bc5f0d92a5e4') in 0.0229603 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/PandazoleHome/Prefabs/Ground Bases/Prop_GroundBase_04.prefab
-  artifactKey: Guid(caa2c28eb7b1b4f4d808914ea9904d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PandazoleHome/Prefabs/Ground Bases/Prop_GroundBase_04.prefab using Guid(caa2c28eb7b1b4f4d808914ea9904d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5f8aec553cbfb70a5f40b4169f4cba47') in 0.0236439 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
+Prepare: number of updated asset objects reloaded= 0
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
