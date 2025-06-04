@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     private float staminaRegenTimer;
 
     private bool isInvincible = false;
+    public float invisDelay = 2.0f;
 
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private InputActionAsset inputActions;
@@ -231,6 +232,8 @@ public class PlayerController : MonoBehaviour
 
         rb.isKinematic = false;
         Debug.Log("Player respawned.");
+        yield return new WaitForSeconds(invisDelay);
+        isInvincible = false;
     }
 
     private IEnumerator RestartLevel()
@@ -239,7 +242,8 @@ public class PlayerController : MonoBehaviour
         rb.isKinematic = true;
 
         yield return new WaitForSeconds(2f);
-
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         UnityEngine.SceneManagement.SceneManager.LoadScene("Restart");
     }
 }
