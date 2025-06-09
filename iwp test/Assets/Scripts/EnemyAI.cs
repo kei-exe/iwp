@@ -11,9 +11,13 @@ public class EnemyAI : MonoBehaviour
     public float viewAngle = 90f;
     public float timeToLosePlayer = 3f;
 
+    public float attackDistance = 1.5f;
+    public float spiderAttackDelay = 1.0f;
+
     private Transform player;
     private int currentPoint = 0;
     private float loseTimer = 0f;
+    private bool isAttacking = false;
 
     [SerializeField] private Animator animator;
 
@@ -27,6 +31,8 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
+        if (isAttacking) return;
+
         switch (currentState)
         {
             case State.Patrol:
@@ -41,11 +47,8 @@ public class EnemyAI : MonoBehaviour
         }
 
         // Debug view cone lines
-        Vector3 leftRayDir = Quaternion.Euler(0, -viewAngle / 2f, 0) * transform.forward;
-        Vector3 rightRayDir = Quaternion.Euler(0, viewAngle / 2f, 0) * transform.forward;
-
-        Debug.DrawRay(transform.position + Vector3.up, leftRayDir * viewDistance, Color.yellow);
-        Debug.DrawRay(transform.position + Vector3.up, rightRayDir * viewDistance, Color.yellow);
+        Debug.DrawRay(transform.position + Vector3.up, Quaternion.Euler(0, -viewAngle / 2f, 0) * transform.forward * viewDistance, Color.yellow);
+        Debug.DrawRay(transform.position + Vector3.up, Quaternion.Euler(0, viewAngle / 2f, 0) * transform.forward * viewDistance, Color.yellow);
     }
 
     void Patrol()
@@ -64,10 +67,48 @@ public class EnemyAI : MonoBehaviour
 
     void Chase()
     {
-        MoveTowards(player.position, chaseSpeed);
+        if (Vector3.Distance(transform.position, player.position) > 1.5f)
+        {
+            MoveTowards(player.position, chaseSpeed);
+            animator.SetBool("IsWalking", true);
+        }
+        else
+        {
+            animator.SetBool("IsWalking", false);
+        }
 
-        animator.SetBool("IsWalking", false);
         animator.SetBool("IsChasing", true);
+
+        if (gameObject.CompareTag("Spider"))
+        {
+            animator.SetBool("IsWalking", true);
+            animator.SetBool("IsChasing", false);
+        }
+    }
+
+    IEnumerator AttackPlayer(PlayerController pc)
+    {
+        if (pc == null) yield break;
+
+        isAttacking = true;
+
+        // Stop movement and play animation
+        animator.SetTrigger("IsAttacking");
+
+        // Freeze movement only
+        pc.rb.linearVelocity = Vector3.zero;
+        pc.rb.isKinematic = true;
+
+        animator.SetTrigger("IsAttacking");
+
+        yield return new WaitForSeconds(1f); // match attack animation length
+
+        pc.TakeDamage(1);
+
+        // Unfreeze movement
+        pc.rb.isKinematic = false;
+
+        isAttacking = false;
     }
 
     void CheckForPlayer()
@@ -125,15 +166,9 @@ public class EnemyAI : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !isAttacking)
         {
-            PlayerController player = other.GetComponent<PlayerController>();
-            if (player != null)
-            {
-                animator.SetTrigger("IsAttacking");
-
-                player.TakeDamage(1);
-            }
+            StartCoroutine(AttackPlayer(other.GetComponent<PlayerController>()));
         }
     }
 }

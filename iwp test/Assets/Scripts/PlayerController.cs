@@ -35,12 +35,15 @@ public class PlayerController : MonoBehaviour
     private bool isInvincible = false;
     public float invisDelay = 2.0f;
 
+    [Header("Interaction")]
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private InputActionAsset inputActions;
+    public float interactionDistance = 2f;
+    public LayerMask interactableLayer;
 
-    private InputAction move, look, jump, sprint, crouch;
+    private InputAction move, look, jump, sprint, crouch, interact;
 
-    private Rigidbody rb;
+    public Rigidbody rb;
     private CapsuleCollider col;
     private float originalHeight;
     private Vector3 originalCamPos;
@@ -72,6 +75,7 @@ public class PlayerController : MonoBehaviour
         jump = inputActions["Jump"];
         sprint = inputActions["Sprint"];
         crouch = inputActions["Crouch"];
+        interact = inputActions["Interact"];
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -87,6 +91,8 @@ public class PlayerController : MonoBehaviour
         moveInput = move.ReadValue<Vector2>();
         lookInput = look.ReadValue<Vector2>();
 
+        HandleInteraction();
+
         HandleLook();
         HandleJump();
         HandleCrouch();
@@ -100,6 +106,25 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
     }
 
+    void HandleInteraction()
+    {
+        if (interact.WasPressedThisFrame())
+        {
+            Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);
+            Debug.DrawRay(cameraTransform.position, cameraTransform.forward * 3f, Color.cyan, 0.5f);
+
+            if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance, interactableLayer))
+            {
+                IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
+
+                if (interactable != null)
+                {
+                    interactable.OnInteract();
+                }
+            }
+        }
+    }
+
     void HandleMovement()
     {
         float currentSpeed = walkSpeed;
@@ -111,7 +136,6 @@ public class PlayerController : MonoBehaviour
         else if (sprint.IsPressed() && !isSprintingBlocked && currentStamina > 0f)
         {
             currentSpeed = sprintSpeed;
-            Debug.Log(currentStamina);
         }
 
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
@@ -210,7 +234,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(RespawnAfterDelay(0.5f)); // shorter delay
         else
             Die();
-        
+
     }
 
     void Die()
