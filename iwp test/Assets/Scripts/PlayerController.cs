@@ -57,6 +57,10 @@ public class PlayerController : MonoBehaviour
     private bool isCrouching = false;
     private float rotation = 0f;
 
+    [Header("UI")]
+    public GameObject restartPanel;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -258,16 +262,28 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Player respawned.");
         yield return new WaitForSeconds(invisDelay);
         isInvincible = false;
+        Debug.Log("RUN");
     }
 
     private IEnumerator RestartLevel()
     {
         rb.linearVelocity = Vector3.zero;
         rb.isKinematic = true;
+        
 
         yield return new WaitForSeconds(2f);
+
+        Debug.Log("RESTARTING");
+
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Restart");
+        Debug.Log("RESTARTINGGGG");
+        
+        Time.timeScale = 0f;
+        if (restartPanel != null)
+        {
+            Debug.Log("RESTARTINGS");
+            restartPanel.SetActive(true);
+        }
     }
 }

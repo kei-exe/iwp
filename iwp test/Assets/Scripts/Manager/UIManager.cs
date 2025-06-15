@@ -1,6 +1,7 @@
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -61,4 +62,17 @@ public class UIManager : MonoBehaviour
         questText.text = $"<b>{title}</b>\n{message}";
     }
 
+    public void Restarted()
+    {
+        playerController.restartPanel.SetActive(false);
+        Time.timeScale = 1f;
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
