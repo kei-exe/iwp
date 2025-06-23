@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     private InputAction move, look, jump, sprint, crouch, interact;
 
-    public Rigidbody rb;
+    [HideInInspector] public Rigidbody rb;
     private CapsuleCollider col;
     private float originalHeight;
     private Vector3 originalCamPos;
@@ -57,9 +57,11 @@ public class PlayerController : MonoBehaviour
     private bool isCrouching = false;
     private float rotation = 0f;
 
+    [Header("Animation")]
+    [SerializeField] private Animator animator;
+
     [Header("UI")]
     public GameObject restartPanel;
-
 
     void Start()
     {
@@ -149,6 +151,10 @@ public class PlayerController : MonoBehaviour
         {
             rb.linearVelocity = velocity;
         }
+
+        // anim
+        bool isWalking = moveInput.magnitude > 0.1f && isGrounded;
+        animator.SetBool("IsWalking", isWalking);
     }
 
     void HandleLook()
