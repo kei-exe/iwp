@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private InputActionAsset inputActions;
     public float interactionDistance = 2f;
     public LayerMask interactableLayer;
+    private IInteractable lastInteractable;
 
     private InputAction move, look, jump, sprint, crouch, interact;
 
@@ -114,20 +115,48 @@ public class PlayerController : MonoBehaviour
 
     void HandleInteraction()
     {
-        if (interact.WasPressedThisFrame())
+        Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);
+        Debug.DrawRay(cameraTransform.position, cameraTransform.forward * 3f, Color.cyan, 0.5f);
+
+        if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance, interactableLayer))
         {
-            Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);
-            Debug.DrawRay(cameraTransform.position, cameraTransform.forward * 3f, Color.cyan, 0.5f);
+            IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
 
-            if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance, interactableLayer))
+            if (interactable != null)
             {
-                IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
+                if (interactable != lastInteractable)
+                {
+                    if (lastInteractable is Torch prevTorch)
+                        prevTorch.HidePrompt();
 
-                if (interactable != null)
+                    lastInteractable = interactable;
+
+                    if (interactable is Torch torch)
+                        torch.ShowPrompt();
+                }
+
+                if (interact.WasPressedThisFrame())
                 {
                     interactable.OnInteract();
                 }
             }
+            else
+            {
+                ClearPrompt();
+            }
+        }
+        else
+        {
+            ClearPrompt();
+        }
+    }
+
+    void ClearPrompt()
+    {
+        if (lastInteractable is Torch torch)
+        {
+            torch.HidePrompt();
+            lastInteractable = null;
         }
     }
 
@@ -275,7 +304,7 @@ public class PlayerController : MonoBehaviour
     {
         rb.linearVelocity = Vector3.zero;
         rb.isKinematic = true;
-        
+
 
         yield return new WaitForSeconds(2f);
 
@@ -284,7 +313,7 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Debug.Log("RESTARTINGGGG");
-        
+
         Time.timeScale = 0f;
         if (restartPanel != null)
         {
