@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class WallsClosingIn : MonoBehaviour
 {
-    public Transform leftWall;
-    public Transform rightWall;
-    public Transform frontWall;
-    public Transform backWall;
-    public Transform ceiling;
-    public float moveSpeed = 1f;
-    public float targetDistance = 1f;
+    [SerializeField] private Transform leftWall;
+    [SerializeField] private Transform rightWall;
+    [SerializeField] private Transform frontWall;
+    [SerializeField] private Transform backWall;
+    [SerializeField] private Transform ceiling;
+    [SerializeField] private GameObject hole;
+    [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private float targetDistance = 1f;
 
     private bool startClosing = false;
 
@@ -40,6 +41,7 @@ public class WallsClosingIn : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             startClosing = true;
+            hole.SetActive(true);
             Destroy(GetComponent<Collider>()); // disable re-entry
         }
     }

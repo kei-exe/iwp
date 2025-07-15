@@ -12,4 +12,9 @@ public class LoadScript : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void End()
+    {
+        UnityEngine.Application.Quit();
+    }
 }
