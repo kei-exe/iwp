@@ -185,6 +185,10 @@ public class PlayerController : MonoBehaviour
         bool isWalking = moveInput.magnitude > 0.1f && isGrounded;
         animator.SetBool("IsWalking", isWalking);
     }
+    public void SetMouseSensitivity(float newSensitivity)
+    {
+        mouseSensitivity = newSensitivity;
+    }
 
     void HandleLook()
     {

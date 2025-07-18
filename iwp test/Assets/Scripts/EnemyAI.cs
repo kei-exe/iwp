@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class EnemyAI : MonoBehaviour
     private bool isAttacking = false;
 
     [SerializeField] private Animator animator;
+    private NavMeshAgent agent;
 
     private enum State { Patrol, Chase }
     private State currentState = State.Patrol;
@@ -27,6 +29,11 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        agent = GetComponent<NavMeshAgent>();
+        agent.speed = patrolSpeed;
+        agent.autoBraking = true;
+        agent.stoppingDistance = 0.1f;
+        GoToNextPatrolPoint();
     }
 
     void Update()
@@ -53,31 +60,38 @@ public class EnemyAI : MonoBehaviour
 
     void Patrol()
     {
-        Transform target = patrolPoints[currentPoint];
-        MoveTowards(target.position, patrolSpeed);
-
-        if (Vector3.Distance(transform.position, target.position) < 0.5f)
+        if (!agent.pathPending && agent.remainingDistance < 0.3f)
         {
             currentPoint = (currentPoint + 1) % patrolPoints.Length;
+            GoToNextPatrolPoint();
         }
 
         animator.SetBool("IsWalking", true);
         animator.SetBool("IsChasing", false);
     }
 
+    void GoToNextPatrolPoint()
+    {
+        if (patrolPoints.Length == 0) return;
+        agent.speed = patrolSpeed;
+        agent.SetDestination(patrolPoints[currentPoint].position);
+    }
+
     void Chase()
     {
-        if (Vector3.Distance(transform.position, player.position) > 1.5f)
+        animator.SetBool("IsWalking", true);
+        animator.SetBool("IsChasing", true);
+
+        if (Vector3.Distance(transform.position, player.position) > attackDistance)
         {
-            MoveTowards(player.position, chaseSpeed);
-            animator.SetBool("IsWalking", true);
+            agent.speed = chaseSpeed;
+            agent.SetDestination(player.position);
         }
         else
         {
+            agent.ResetPath();
             animator.SetBool("IsWalking", false);
         }
-
-        animator.SetBool("IsChasing", true);
 
         if (gameObject.CompareTag("Spider"))
         {
@@ -91,23 +105,17 @@ public class EnemyAI : MonoBehaviour
         if (pc == null) yield break;
 
         isAttacking = true;
-
-        // Stop movement and play animation
+        agent.ResetPath();
         animator.SetTrigger("IsAttacking");
 
         // Freeze movement only
         pc.rb.linearVelocity = Vector3.zero;
         pc.rb.isKinematic = true;
 
-        animator.SetTrigger("IsAttacking");
-
-        yield return new WaitForSeconds(1f); // match attack animation length
+        yield return new WaitForSeconds(spiderAttackDelay); // match attack animation length
 
         pc.TakeDamage(1);
-
-        // Unfreeze movement
         pc.rb.isKinematic = false;
-
         isAttacking = false;
     }
 
