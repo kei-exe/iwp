@@ -60,8 +60,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask plankLayer;
     [SerializeField] private float plankCheckDistance = 0.2f;
 
-    [Header("Checkpoint Respawn")]
+    [Header("L2 Respawn")]
     private Vector3 lastCheckpoint;
+    [SerializeField] private float fallThresholdY = -10f;
 
     [Header("Interaction")]
     [SerializeField] private PlayerInput playerInput;
@@ -171,6 +172,8 @@ public class PlayerController : MonoBehaviour
         {
             footstepTimer = 0f;
         }
+
+        CheckFallHeight();
     }
 
     void FixedUpdate()
@@ -302,7 +305,7 @@ public class PlayerController : MonoBehaviour
         // Fall check
         if (Mathf.Abs(plankTilt) >= plankFallThreshold)
         {
-            RespawnToCheckpoint();
+            LoseLifeAndRespawn();
         }
     }
 
@@ -362,6 +365,33 @@ public class PlayerController : MonoBehaviour
     public void UpdateCheckpoint(Vector3 checkpointPos)
     {
         lastCheckpoint = checkpointPos;
+    }
+
+    void CheckFallHeight()
+    {
+        if (transform.position.y < fallThresholdY)
+        {
+            LoseLifeAndRespawn();
+        }
+    }
+
+    void LoseLifeAndRespawn()
+    {
+        currentHealth--;
+
+        if (currentHealth > 0)
+        {
+            Debug.Log("You fell! Respawning to spawn point.");
+            transform.position = spawnPosition;
+            rb.linearVelocity = Vector3.zero;
+            plankTilt = 0f;
+            cameraTransform.localRotation = Quaternion.Euler(rotation, 0f, 0f);
+        }
+        else
+        {
+            Debug.Log("No lives left!");
+            Die();
+        }
     }
 
     public void RespawnToCheckpoint()

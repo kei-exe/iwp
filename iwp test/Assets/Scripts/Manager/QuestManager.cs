@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
-    public string questName = "Light the torches";
-    public string description = "Solve the forest puzzle by lighting the torches in the correct order.";
+    [SerializeField] private string questName = "";
+    [SerializeField] private string description = "";
     public QuestState state = QuestState.NotStarted;
 
     public enum QuestState { NotStarted, InProgress, Completed }
-
+    
     public UIManager uiManager;
 
     [SerializeField] private GameObject trigger;
@@ -32,13 +32,13 @@ public class QuestManager : MonoBehaviour
         if (state == QuestState.InProgress)
         {
             state = QuestState.Completed;
-            uiManager.UpdateQuest(questName, "Completed! Return to the bedroom.");
+            uiManager.UpdateQuest(questName, "Completed! Nice job.");
 
-            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene() == UnityEngine.SceneManagement.SceneManager.GetSceneByName("L2"))
-            {
+            if (trigger != null)
                 trigger.SetActive(true);
+
+            if (trigger2 != null)
                 trigger2.SetActive(false);
-            }
         }
     }
 }

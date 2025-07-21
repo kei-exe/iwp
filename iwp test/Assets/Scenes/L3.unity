@@ -1512,6 +1512,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.1972115
       objectReference: {fileID: 0}
+    - target: {fileID: 5709896871363993584, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5722179630573544736, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.000000009653377
@@ -1595,6 +1599,10 @@ PrefabInstance:
     - target: {fileID: 6187117692226939674, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.03318335
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292537863966940701, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6767241126908915639, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1758,6 +1766,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5529748767684381366, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
   m_PrefabInstance: {fileID: 288470033}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &288470035 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1108502703081988428, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+  m_PrefabInstance: {fileID: 288470033}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839261988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea169c29cdf9ec5479d8b23b7c466954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &331236753
 GameObject:
   m_ObjectHideFlags: 0
@@ -4760,6 +4779,7 @@ MonoBehaviour:
   displayText: {fileID: 943574013}
   correctCode: 7248
   keypadCanvas: {fileID: 707839537}
+  timeline: {fileID: 8608684789994666025}
 --- !u!1 &735429513
 GameObject:
   m_ObjectHideFlags: 0
@@ -7246,10 +7266,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 840943123}
-  - component: {fileID: 840943122}
   - component: {fileID: 840943121}
   - component: {fileID: 840943124}
   - component: {fileID: 840943125}
+  - component: {fileID: 840943126}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -7270,25 +7290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctSequence: 010000000300000002000000
-  linkedQuest: {fileID: 840943122}
---- !u!114 &840943122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 840943120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548981ddcc247ac469d3d89e75ec23d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questName: Get the Key
-  description: Solve the puzzles on each wall to get the code to the safe.
-  state: 0
-  uiManager: {fileID: 1232982814}
-  trigger: {fileID: 0}
-  trigger2: {fileID: 0}
+  linkedQuest: {fileID: 0}
 --- !u!4 &840943123
 Transform:
   m_ObjectHideFlags: 0
@@ -7331,6 +7333,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 75164788f7d175443971f9785ac94ac9, type: 2}
   musicSource: {fileID: 1586674787}
+--- !u!114 &840943126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840943120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548981ddcc247ac469d3d89e75ec23d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questName: 
+  description: 
+  state: 0
+  uiManager: {fileID: 288470035}
+  trigger: {fileID: 0}
+  trigger2: {fileID: 0}
 --- !u!1 &897490811
 GameObject:
   m_ObjectHideFlags: 0
@@ -8560,17 +8580,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8699348616797093058, guid: 3040f12e68d028c4bab5e5c818da0050, type: 3}
   m_PrefabInstance: {fileID: 1213469795}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1232982814 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1108502703081988428, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
-  m_PrefabInstance: {fileID: 288470033}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839261988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea169c29cdf9ec5479d8b23b7c466954, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1235446473
 GameObject:
   m_ObjectHideFlags: 0
@@ -32408,7 +32417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playableDirector: {fileID: 8608684789994666023}
-  player: {fileID: 839261988}
+  player: {fileID: 0}
   autoPlayOnStart: 0
   loadSceneOnEnd: 1
   sceneToLoad: Main

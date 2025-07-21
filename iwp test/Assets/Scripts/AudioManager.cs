@@ -1,15 +1,16 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
     [Header("Mixer")]
-    public AudioMixer audioMixer;
+    [SerializeField] private AudioMixer audioMixer;
 
     [Header("Audio Sources")]
-    public AudioSource musicSource;
+    [SerializeField] private AudioSource musicSource;
 
     private void Awake()
     {

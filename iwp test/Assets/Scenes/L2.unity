@@ -22919,6 +22919,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3515825405283642672, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_text
+      value: Quest
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292537863966940701, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7627580154042384019, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.31
@@ -22959,6 +22967,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7729135556891390797, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729135556891390797, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22969,11 +22985,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5529748767684381366, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
   m_PrefabInstance: {fileID: 686226076}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &686226078 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2822673977995182618, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+--- !u!114 &686226078 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1108502703081988428, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
   m_PrefabInstance: {fileID: 686226076}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea169c29cdf9ec5479d8b23b7c466954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &690439915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24900,7 +24922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playableDirector: {fileID: 952444750}
-  player: {fileID: 686226078}
+  player: {fileID: 0}
   autoPlayOnStart: 0
   loadSceneOnEnd: 1
   sceneToLoad: Main
@@ -36015,7 +36037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7533962733890434934, guid: 88a809f0d47ba6f46b841325c5b88f1e, type: 3}
       propertyPath: m_Size.z
-      value: 0.548143
+      value: 0.6960849
       objectReference: {fileID: 0}
     - target: {fileID: 7533962733890434934, guid: 88a809f0d47ba6f46b841325c5b88f1e, type: 3}
       propertyPath: m_Center.x
@@ -36023,7 +36045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7533962733890434934, guid: 88a809f0d47ba6f46b841325c5b88f1e, type: 3}
       propertyPath: m_Center.z
-      value: 0.3172589
+      value: 0.24328794
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -52933,17 +52955,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8903058273634951509, guid: f1fc5bb90ac285e4486771552d63bcb8, type: 3}
   m_PrefabInstance: {fileID: 1730886697}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1734745871 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1108502703081988428, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
-  m_PrefabInstance: {fileID: 686226076}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 686226078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea169c29cdf9ec5479d8b23b7c466954, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1735844785
 GameObject:
   m_ObjectHideFlags: 0
@@ -53615,9 +53626,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1796935676}
   - component: {fileID: 1796935677}
-  - component: {fileID: 1796935678}
   - component: {fileID: 1796935679}
   - component: {fileID: 1796935680}
+  - component: {fileID: 1796935681}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -53653,25 +53664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctSequence: 020000000300000001000000
-  linkedQuest: {fileID: 1796935678}
---- !u!114 &1796935678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1796935675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548981ddcc247ac469d3d89e75ec23d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questName: Light the torches
-  description: Solve the forest puzzle by lighting the torches in the correct order.
-  state: 0
-  uiManager: {fileID: 1734745871}
-  trigger: {fileID: 1160016155}
-  trigger2: {fileID: 1543362399}
+  linkedQuest: {fileID: 1796935681}
 --- !u!114 &1796935679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53699,6 +53692,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 75164788f7d175443971f9785ac94ac9, type: 2}
   musicSource: {fileID: 2114936358}
+--- !u!114 &1796935681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796935675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548981ddcc247ac469d3d89e75ec23d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questName: Light the torches
+  description: Solve the forest puzzle by lighting the torches in the correct order.
+  state: 0
+  uiManager: {fileID: 686226078}
+  trigger: {fileID: 1543362399}
+  trigger2: {fileID: 1160016155}
 --- !u!1001 &1807479991
 PrefabInstance:
   m_ObjectHideFlags: 0

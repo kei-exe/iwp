@@ -9,7 +9,7 @@ public class KeypadUI : MonoBehaviour
     private string currentInput = "";
 
     [SerializeField] private GameObject keypadCanvas;
-    private Timeline timeline;
+    [SerializeField] private Timeline timeline;
 
     public void PressButton(string number)
     {

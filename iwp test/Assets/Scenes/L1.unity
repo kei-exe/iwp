@@ -2733,9 +2733,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 151342729}
-  - component: {fileID: 151342730}
   - component: {fileID: 151342731}
   - component: {fileID: 151342732}
+  - component: {fileID: 151342733}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -2758,25 +2758,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &151342730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 151342728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548981ddcc247ac469d3d89e75ec23d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questName: Cross the Planks
-  description: Walk acorss the planks to each checkpoint until you reach the end.
-    Try not to fall!
-  state: 0
-  uiManager: {fileID: 1817179603}
-  trigger: {fileID: 0}
-  trigger2: {fileID: 0}
 --- !u!114 &151342731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2804,6 +2785,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 75164788f7d175443971f9785ac94ac9, type: 2}
   musicSource: {fileID: 1337740606}
+--- !u!114 &151342733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151342728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548981ddcc247ac469d3d89e75ec23d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  uiManager: {fileID: 1817179603}
+  trigger: {fileID: 0}
+  trigger2: {fileID: 0}
 --- !u!43 &152312740
 Mesh:
   m_ObjectHideFlags: 0
@@ -35449,11 +35446,19 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2469507745371300445, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2822673977995182618, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2822673977995182618, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292537863966940701, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -35496,6 +35501,14 @@ PrefabInstance:
     - target: {fileID: 7627580154042384019, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729135556891390797, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729135556891390797, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
