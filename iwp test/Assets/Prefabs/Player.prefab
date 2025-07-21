@@ -1713,6 +1713,17 @@ MonoBehaviour:
   staminaRegenRate: 15
   staminaRegenDelay: 1.5
   invisDelay: 2
+  isOnPlank: 0
+  plankForwardSpeed: 3
+  plankBalanceSensitivity: 2
+  plankMaxTiltAngle: 30
+  plankFallThreshold: 25
+  autoTiltSpeed: 5
+  autoTiltDirectionChangeTime: 2
+  plankLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  plankCheckDistance: 0.2
   playerInput: {fileID: 1385563281762020818}
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   interactionDistance: 2
@@ -2857,11 +2868,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7631383898624499323}
   - {fileID: 7041280257834774787}
   - {fileID: 3251738773293898225}
   - {fileID: 1400563994887775852}
   - {fileID: 256347424280243437}
-  - {fileID: 7631383898624499323}
   m_Father: {fileID: 7627580154042384019}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

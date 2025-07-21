@@ -35503,6 +35503,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bedroom2
       objectReference: {fileID: 0}
+    - target: {fileID: 3017545757761510267, guid: 88a809f0d47ba6f46b841325c5b88f1e, type: 3}
+      propertyPath: targetSceneName
+      value: Main
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3276453724684011644, guid: 88a809f0d47ba6f46b841325c5b88f1e, type: 3}

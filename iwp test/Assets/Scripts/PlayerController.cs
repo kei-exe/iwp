@@ -35,6 +35,27 @@ public class PlayerController : MonoBehaviour
     private bool isInvincible = false;
     public float invisDelay = 2.0f;
 
+    [Header("Plank Balancing")]
+    public bool isOnPlank = false;
+    public float plankForwardSpeed = 3f;
+    public float plankBalanceSensitivity = 2f;
+    public float plankMaxTiltAngle = 30f;
+    public float plankFallThreshold = 25f;
+    private float plankTilt = 0f;
+
+    public float autoTiltSpeed = 5f;          // speed of drift
+    public float autoTiltDirectionChangeTime = 2f; // how often drift changes direction
+
+    private float autoTiltTimer = 0f;
+    private int autoTiltDirection = 1;        // 1 = right, -1 = left
+
+    [Header("Plank Detection")]
+    [SerializeField] private LayerMask plankLayer;
+    [SerializeField] private float plankCheckDistance = 0.2f;
+
+    [Header("Checkpoint Respawn")]
+    private Vector3 lastCheckpoint;
+
     [Header("Interaction")]
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private InputActionAsset inputActions;
@@ -75,6 +96,7 @@ public class PlayerController : MonoBehaviour
         targetCamPos = originalCamPos;
 
         spawnPosition = transform.position;
+        lastCheckpoint = transform.position;
 
         // Reference actions
         move = inputActions["Move"];
@@ -99,12 +121,18 @@ public class PlayerController : MonoBehaviour
         lookInput = look.ReadValue<Vector2>();
 
         HandleInteraction();
+        CheckIfOnPlank();
+
+        if (isOnPlank)
+        {
+            HandlePlankMovement();
+            return;
+        }
 
         HandleLook();
         HandleJump();
         HandleCrouch();
         SmoothCrouch();
-
         HandleStamina();
     }
 
@@ -168,12 +196,23 @@ public class PlayerController : MonoBehaviour
         {
             currentSpeed = crouchSpeed;
         }
-        else if (sprint.IsPressed() && !isSprintingBlocked && currentStamina > 0f)
+        else if (!isOnPlank && sprint.IsPressed() && !isSprintingBlocked && currentStamina > 0f)
         {
             currentSpeed = sprintSpeed;
         }
 
-        Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
+        Vector3 move;
+        if (isOnPlank)
+        {
+            // Only allow forward/backward on plank
+            move = transform.forward * moveInput.y;
+        }
+        else
+        {
+            // Normal movement
+            move = transform.right * moveInput.x + transform.forward * moveInput.y;
+        }
+
         Vector3 velocity = move.normalized * currentSpeed;
         velocity.y = rb.linearVelocity.y;
         if (!rb.isKinematic)
@@ -185,9 +224,115 @@ public class PlayerController : MonoBehaviour
         bool isWalking = moveInput.magnitude > 0.1f && isGrounded;
         animator.SetBool("IsWalking", isWalking);
     }
+
     public void SetMouseSensitivity(float newSensitivity)
     {
         mouseSensitivity = newSensitivity;
+    }
+
+    void HandlePlankMovement()
+    {
+        float forwardInput = Input.GetKey(KeyCode.W) ? 1 : Input.GetKey(KeyCode.S) ? -1 : 0;
+        float balanceInput = Input.GetKey(KeyCode.D) ? -1 : Input.GetKey(KeyCode.A) ? 1 : 0;
+
+        // Move forward/back
+        transform.position += transform.forward * forwardInput * plankForwardSpeed * Time.deltaTime;
+
+        // Drift logic
+        autoTiltTimer += Time.deltaTime;
+        if (autoTiltTimer >= autoTiltDirectionChangeTime)
+        {
+            autoTiltDirection *= -1;
+            autoTiltTimer = 0f;
+        }
+
+        // Apply auto-tilt drift
+        plankTilt += autoTiltDirection * autoTiltSpeed * Time.deltaTime;
+
+        // Apply player counterbalance
+        plankTilt += balanceInput * plankBalanceSensitivity * Time.deltaTime;
+
+        // Clamp tilt
+        plankTilt = Mathf.Clamp(plankTilt, -plankMaxTiltAngle, plankMaxTiltAngle);
+
+        // Rotate player based on tilt
+        transform.localRotation = Quaternion.Euler(0f, transform.localEulerAngles.y, plankTilt);
+
+        // Fall check
+        if (Mathf.Abs(plankTilt) >= plankFallThreshold)
+        {
+            RespawnToCheckpoint();
+        }
+    }
+
+    void CheckIfOnPlank()
+    {
+        Vector3 origin = transform.position + Vector3.up * 0.1f;
+        Ray ray = new Ray(origin, Vector3.down);
+
+        if (Physics.Raycast(ray, out RaycastHit hit, plankCheckDistance))
+        {
+            if (((1 << hit.collider.gameObject.layer) & plankLayer) != 0)
+            {
+                if (!isOnPlank)
+                {
+                    // First time stepping on plank
+                    isOnPlank = true;
+
+                    Vector3 plankForward = hit.transform.forward;
+                    plankForward.y = 0;
+                    plankForward.Normalize();
+
+                    Vector3 playerForward = transform.forward;
+                    playerForward.y = 0;
+                    playerForward.Normalize();
+
+                    // If dot product is negative, it means plank is facing opposite direction from player
+                    if (Vector3.Dot(playerForward, plankForward) < 0)
+                    {
+                        // Flip the plank direction
+                        plankForward = -plankForward;
+                    }
+
+                    if (plankForward != Vector3.zero)
+                    {
+                        Quaternion targetRot = Quaternion.LookRotation(plankForward);
+                        transform.rotation = targetRot;
+                    }
+                }
+            }
+            else
+            {
+                isOnPlank = false;
+            }
+        }
+        else
+        {
+            isOnPlank = false;
+        }
+
+        if (!isOnPlank)
+        {
+            plankTilt = 0f;
+            transform.localRotation = Quaternion.Euler(0f, transform.localEulerAngles.y, 0f);
+        }
+    }
+
+    public void UpdateCheckpoint(Vector3 checkpointPos)
+    {
+        lastCheckpoint = checkpointPos;
+    }
+
+    public void RespawnToCheckpoint()
+    {
+        rb.linearVelocity = Vector3.zero;
+        rb.isKinematic = true;
+
+        transform.position = lastCheckpoint;
+        plankTilt = 0f;
+        cameraTransform.localRotation = Quaternion.Euler(rotation, 0f, plankTilt);
+
+        rb.isKinematic = false;
     }
 
     void HandleLook()
@@ -198,7 +343,9 @@ public class PlayerController : MonoBehaviour
         rotation -= mouseY;
         rotation = Mathf.Clamp(rotation, -90f, 90f);
 
-        cameraTransform.localRotation = Quaternion.Euler(rotation, 0f, 0f);
+        Quaternion current = cameraTransform.localRotation;
+        cameraTransform.localRotation = Quaternion.Euler(rotation, 0f, current.eulerAngles.z); // preserve tilt
+
         transform.Rotate(Vector3.up * mouseX);
     }
 
@@ -226,7 +373,7 @@ public class PlayerController : MonoBehaviour
 
     void HandleStamina()
     {
-        if (sprint.IsPressed() && !isCrouching && moveInput != Vector2.zero && !isSprintingBlocked)
+        if (!isOnPlank && sprint.IsPressed() && !isCrouching && moveInput != Vector2.zero && !isSprintingBlocked)
         {
             currentStamina -= staminaDrainRate * Time.deltaTime;
 
@@ -282,7 +429,7 @@ public class PlayerController : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Player died — all health lost.");
+        Debug.Log("Player died ï¿½ all health lost.");
         StartCoroutine(RestartLevel());
     }
 
@@ -324,5 +471,12 @@ public class PlayerController : MonoBehaviour
             Debug.Log("RESTARTINGS");
             restartPanel.SetActive(true);
         }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Vector3 origin = transform.position + Vector3.up * 0.1f;
+        Gizmos.DrawLine(origin, origin + Vector3.down * plankCheckDistance);
     }
 }
