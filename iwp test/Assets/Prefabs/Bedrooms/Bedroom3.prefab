@@ -796,7 +796,7 @@ GameObject:
   - component: {fileID: 8470435128807809245}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Concrete
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1574,7 +1574,7 @@ GameObject:
   - component: {fileID: 1605518785436157068}
   - component: {fileID: 886696413079801517}
   - component: {fileID: 4342771364712250220}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}

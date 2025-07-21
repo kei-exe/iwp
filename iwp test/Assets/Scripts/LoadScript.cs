@@ -1,5 +1,5 @@
-using TMPro;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 public class LoadScript : MonoBehaviour
@@ -24,7 +24,7 @@ public class LoadScript : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            Time.timeScale = 0f; // Pause game (optional)
+            Time.timeScale = 0f;
         }
         else
         {
@@ -36,7 +36,7 @@ public class LoadScript : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneName);
     }
 
     public void Settings()
@@ -45,17 +45,16 @@ public class LoadScript : MonoBehaviour
         {
             settingsPanel.SetActive(true);
         }
-
     }
 
     public void Restart()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void End()
     {
-        UnityEngine.Application.Quit();
+        Application.Quit();
     }
 
     private void OnTriggerEnter(Collider other)

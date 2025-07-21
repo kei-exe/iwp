@@ -4,11 +4,22 @@ using UnityEngine.SceneManagement;
 public class BedInteract : MonoBehaviour, IInteractable
 {
     [SerializeField] private string targetSceneName;
-    private QuestManager questManager;
+    [SerializeField] private Timeline timeline;
 
     public void OnInteract()
     {
-        //if (questManager.state != QuestManager.QuestState.Completed) return;
-        SceneManager.LoadScene(targetSceneName);
+        if (gameObject.CompareTag("B2"))
+        {
+            timeline.PlayTimelineManually();
+        }
+        else
+        {
+            SceneManager.LoadScene(targetSceneName);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        timeline.PlayTimelineManually();
     }
 }

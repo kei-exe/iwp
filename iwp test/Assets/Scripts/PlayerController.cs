@@ -2,6 +2,13 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[System.Serializable]
+public class FootstepAudioSet
+{
+    public string surfaceTag; // e.g. "Concrete", "Grass"
+    public AudioClip[] footstepClips; // multiple variations
+}
+
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
@@ -82,6 +89,15 @@ public class PlayerController : MonoBehaviour
     [Header("Animation")]
     [SerializeField] private Animator animator;
 
+    [Header("Audio")]
+    [SerializeField] private AudioManager audioManager;
+    private AudioSource sfxSource;
+    [SerializeField] private AudioClip[] sfxClips;
+    [Header("Footstep Audio")]
+    public FootstepAudioSet[] footstepAudioSets;
+    private float footstepTimer = 0f;
+    public float footstepInterval = 0.5f;
+
     [Header("UI")]
     public GameObject restartPanel;
 
@@ -105,6 +121,8 @@ public class PlayerController : MonoBehaviour
         sprint = inputActions["Sprint"];
         crouch = inputActions["Crouch"];
         interact = inputActions["Interact"];
+
+        sfxSource = GetComponent<AudioSource>();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -134,6 +152,25 @@ public class PlayerController : MonoBehaviour
         HandleCrouch();
         SmoothCrouch();
         HandleStamina();
+
+        //footstep audio
+        if (moveInput.magnitude > 0.1f && isGrounded && !isOnPlank)
+        {
+            footstepTimer += Time.deltaTime;
+            if (footstepTimer >= footstepInterval)
+            {
+                AudioClip clip = GetFootstepClip();
+                if (clip != null)
+                {
+                    sfxSource.PlayOneShot(clip);
+                }
+                footstepTimer = 0f;
+            }
+        }
+        else
+        {
+            footstepTimer = 0f;
+        }
     }
 
     void FixedUpdate()
@@ -165,6 +202,10 @@ public class PlayerController : MonoBehaviour
 
                 if (interact.WasPressedThisFrame())
                 {
+                    if (lastInteractable is ElevatorButton elevatorButton)
+                    {
+                        PlaySFX(1);
+                    }
                     interactable.OnInteract();
                 }
             }
@@ -354,6 +395,7 @@ public class PlayerController : MonoBehaviour
         if (jump.WasPressedThisFrame() && isGrounded && !isCrouching)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            PlaySFX(0);
         }
     }
 
@@ -408,6 +450,7 @@ public class PlayerController : MonoBehaviour
         col.height = Mathf.Lerp(col.height, targetHeight, Time.deltaTime * crouchSmooth);
         cameraTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, targetCamPos, Time.deltaTime * crouchSmooth);
     }
+
     void CheckGrounded()
     {
         float checkDistance = 0.1f;
@@ -471,6 +514,37 @@ public class PlayerController : MonoBehaviour
             Debug.Log("RESTARTINGS");
             restartPanel.SetActive(true);
         }
+    }
+
+    public void SetPlayerEnabled(bool enabled)
+    {
+        gameObject.SetActive(enabled);
+    }
+
+    public void PlaySFX(int index)
+    {
+        if (index >= 0 && index < sfxClips.Length && sfxClips[index] != null)
+        {
+            sfxSource.PlayOneShot(sfxClips[index]);
+        }
+    }
+
+    private AudioClip GetFootstepClip()
+    {
+        Ray ray = new Ray(transform.position + Vector3.up * 0.1f, Vector3.down);
+        if (Physics.Raycast(ray, out RaycastHit hit, 2f))
+        {
+            string tag = hit.collider.tag;
+            foreach (var set in footstepAudioSets)
+            {
+                if (set.surfaceTag == tag && set.footstepClips.Length > 0)
+                {
+                    int index = Random.Range(0, set.footstepClips.Length);
+                    return set.footstepClips[index];
+                }
+            }
+        }
+        return null;
     }
 
     void OnDrawGizmosSelected()

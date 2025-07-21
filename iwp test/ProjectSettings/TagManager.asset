@@ -7,6 +7,10 @@ TagManager:
   - Ground
   - Spider
   - Torch
+  - Concrete
+  - Grass
+  - Wood
+  - B2
   layers:
   - Default
   - TransparentFX

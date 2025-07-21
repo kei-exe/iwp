@@ -1,15 +1,15 @@
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
+using UnityEngine.Playables;
 
 public class KeypadUI : MonoBehaviour
 {
-    public TextMeshProUGUI displayText; // UI Text showing the input
-    public string correctCode = "7253";
+    [SerializeField] private TextMeshProUGUI displayText; // UI Text showing the input
+    [SerializeField] private string correctCode = "7253";
     private string currentInput = "";
 
-    public GameObject keypadCanvas;
-    public GameObject cutsceneTriggerObject; // Assign a Timeline or Animation Trigger
+    [SerializeField] private GameObject keypadCanvas;
+    private Timeline timeline;
 
     public void PressButton(string number)
     {
@@ -45,14 +45,10 @@ public class KeypadUI : MonoBehaviour
         {
             Debug.Log("Correct code!");
 
-            // Hide UI
             ExitKeypad();
 
-            // Trigger cutscene
-            if (cutsceneTriggerObject != null)
-            {
-                cutsceneTriggerObject.GetComponent<Animator>()?.SetTrigger("Play");
-            }
+            // timeline
+            timeline.PlayTimelineManually();
         }
         else
         {

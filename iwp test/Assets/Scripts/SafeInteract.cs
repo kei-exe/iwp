@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SafeInteract : MonoBehaviour, IInteractable
 {
-    public GameObject keypadCanvas; // Assign in Inspector
+    [SerializeField] private GameObject keypadCanvas;
 
     public void OnInteract()
     {
