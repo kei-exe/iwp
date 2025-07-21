@@ -10,6 +10,9 @@ public class QuestManager : MonoBehaviour
 
     public UIManager uiManager;
 
+    [SerializeField] private GameObject trigger;
+    [SerializeField] private GameObject trigger2;
+
     private void Start()
     {
         StartQuest();
@@ -30,6 +33,12 @@ public class QuestManager : MonoBehaviour
         {
             state = QuestState.Completed;
             uiManager.UpdateQuest(questName, "Completed! Return to the bedroom.");
+
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene() == UnityEngine.SceneManagement.SceneManager.GetSceneByName("L2"))
+            {
+                trigger.SetActive(true);
+                trigger2.SetActive(false);
+            }
         }
     }
 }

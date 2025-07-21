@@ -22969,6 +22969,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5529748767684381366, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
   m_PrefabInstance: {fileID: 686226076}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &686226078 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2822673977995182618, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+  m_PrefabInstance: {fileID: 686226076}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &690439915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24895,6 +24900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playableDirector: {fileID: 952444750}
+  player: {fileID: 686226078}
   autoPlayOnStart: 0
   loadSceneOnEnd: 1
   sceneToLoad: Main
@@ -36052,6 +36058,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 106bd4dd5f6b2ec488a8ae7d0b1dcc52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1160016155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5823514120440100914, guid: 88a809f0d47ba6f46b841325c5b88f1e, type: 3}
+  m_PrefabInstance: {fileID: 1160016151}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1179673884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52927,7 +52938,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1108502703081988428, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
   m_PrefabInstance: {fileID: 686226076}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 686226078}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea169c29cdf9ec5479d8b23b7c466954, type: 3}
@@ -53659,6 +53670,8 @@ MonoBehaviour:
   description: Solve the forest puzzle by lighting the torches in the correct order.
   state: 0
   uiManager: {fileID: 1734745871}
+  trigger: {fileID: 1160016155}
+  trigger2: {fileID: 1543362399}
 --- !u!114 &1796935679
 MonoBehaviour:
   m_ObjectHideFlags: 0

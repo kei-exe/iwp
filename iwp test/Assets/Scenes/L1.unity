@@ -2775,6 +2775,8 @@ MonoBehaviour:
     Try not to fall!
   state: 0
   uiManager: {fileID: 1817179603}
+  trigger: {fileID: 0}
+  trigger2: {fileID: 0}
 --- !u!114 &151342731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8580,6 +8582,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4447013151795445328, guid: 365156edfd2aba04a9da0dbc940b7064, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753051663554310618, guid: 365156edfd2aba04a9da0dbc940b7064, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8089518842584264670, guid: 365156edfd2aba04a9da0dbc940b7064, type: 3}
@@ -15689,6 +15695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playableDirector: {fileID: 803751179}
+  player: {fileID: 0}
   autoPlayOnStart: 0
   loadSceneOnEnd: 1
   sceneToLoad: Main
@@ -35452,15 +35459,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7627580154042384019, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.38
+      value: 67.014
       objectReference: {fileID: 0}
     - target: {fileID: 7627580154042384019, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.07
+      value: 25.106
       objectReference: {fileID: 0}
     - target: {fileID: 7627580154042384019, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.57
+      value: 101.883
       objectReference: {fileID: 0}
     - target: {fileID: 7627580154042384019, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
       propertyPath: m_LocalRotation.w

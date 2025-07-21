@@ -7,6 +7,7 @@ public class Timeline : MonoBehaviour
 {
     [Header("Setup")]
     public PlayableDirector playableDirector;
+    [SerializeField] private GameObject player;
     public bool autoPlayOnStart = true;
 
     [Header("On Timeline End")]
@@ -17,6 +18,10 @@ public class Timeline : MonoBehaviour
 
     void Start()
     {
+        if (player != null)
+            player.SetActive(false);
+        
+
         if (playableDirector == null)
             playableDirector = GetComponent<PlayableDirector>();
 
