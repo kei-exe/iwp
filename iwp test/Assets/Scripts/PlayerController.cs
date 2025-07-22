@@ -12,19 +12,20 @@ public class FootstepAudioSet
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    public float walkSpeed = 5f;
-    public float sprintSpeed = 8f;
-    public float crouchSpeed = 2.5f;
-    public float jumpForce = 5f;
+    [SerializeField] private float walkSpeed = 5f;
+    [SerializeField] private float sprintSpeed = 8f;
+    [SerializeField] private float crouchSpeed = 2.5f;
+    [SerializeField] private float jumpForce = 5f;
+    [SerializeField] private float checkDistance = 0.1f;
 
     [Header("Crouch Settings")]
-    public float crouchHeight = 1f;
-    public float crouchCameraOffset = -0.5f;
-    public float crouchSmooth = 6f;
+    [SerializeField] private float crouchHeight = 1f;
+    [SerializeField] private float crouchCameraOffset = -0.5f;
+    [SerializeField] private float crouchSmooth = 6f;
 
     [Header("Mouse Look")]
     public float mouseSensitivity = 1f;
-    public Transform cameraTransform;
+    [SerializeField] private Transform cameraTransform;
 
     [Header("Stats")]
     public int maxHealth = 3;
@@ -32,26 +33,26 @@ public class PlayerController : MonoBehaviour
 
     public float maxStamina = 100f;
     public float currentStamina;
-    public float staminaDrainRate = 20f;
-    public float staminaRegenRate = 15f;
-    public float staminaRegenDelay = 1.5f;
+    [SerializeField] private float staminaDrainRate = 20f;
+    [SerializeField] private float staminaRegenRate = 15f;
+    [SerializeField] private float staminaRegenDelay = 1.5f;
 
     private bool isSprintingBlocked = false;
     private float staminaRegenTimer;
 
     private bool isInvincible = false;
-    public float invisDelay = 2.0f;
+    [SerializeField] private float invisDelay = 2.0f;
 
     [Header("Plank Balancing")]
-    public bool isOnPlank = false;
-    public float plankForwardSpeed = 3f;
-    public float plankBalanceSensitivity = 2f;
-    public float plankMaxTiltAngle = 30f;
-    public float plankFallThreshold = 25f;
+    private bool isOnPlank = false;
+    [SerializeField] private float plankForwardSpeed = 3f;
+    [SerializeField] private float plankBalanceSensitivity = 2f;
+    [SerializeField] private float plankMaxTiltAngle = 30f;
+    [SerializeField] private float plankFallThreshold = 25f;
     private float plankTilt = 0f;
 
-    public float autoTiltSpeed = 5f;          // speed of drift
-    public float autoTiltDirectionChangeTime = 2f; // how often drift changes direction
+    [SerializeField] private float autoTiltSpeed = 5f;
+    [SerializeField] private float autoTiltDirectionChangeTime = 2f;
 
     private float autoTiltTimer = 0f;
     private int autoTiltDirection = 1;        // 1 = right, -1 = left
@@ -394,18 +395,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void RespawnToCheckpoint()
-    {
-        rb.linearVelocity = Vector3.zero;
-        rb.isKinematic = true;
-
-        transform.position = lastCheckpoint;
-        plankTilt = 0f;
-        cameraTransform.localRotation = Quaternion.Euler(rotation, 0f, plankTilt);
-
-        rb.isKinematic = false;
-    }
-
     void HandleLook()
     {
         float mouseX = lookInput.x * mouseSensitivity;
@@ -483,7 +472,6 @@ public class PlayerController : MonoBehaviour
 
     void CheckGrounded()
     {
-        float checkDistance = 0.1f;
         Vector3 origin = transform.position + Vector3.up * 0.1f; // small offset above feet
         isGrounded = Physics.Raycast(origin, Vector3.down, col.bounds.extents.y + checkDistance);
     }
