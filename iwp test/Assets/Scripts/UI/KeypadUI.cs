@@ -1,15 +1,15 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.Playables;
 
 public class KeypadUI : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI displayText; // UI Text showing the input
+    [SerializeField] private TextMeshProUGUI displayText;
     [SerializeField] private string correctCode = "7253";
     private string currentInput = "";
 
     [SerializeField] private GameObject keypadCanvas;
     [SerializeField] private Timeline timeline;
+    [SerializeField] private PlayerController playerController;
 
     public void PressButton(string number)
     {
@@ -37,6 +37,9 @@ public class KeypadUI : MonoBehaviour
         Cursor.visible = false;
         Time.timeScale = 1f;
         ClearInput();
+
+        if (playerController != null)
+            playerController.isLookLocked = false;
     }
 
     void CheckCode()

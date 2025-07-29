@@ -51,6 +51,11 @@ public class LoadScript : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void Quit()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
     public void End()
     {
         Application.Quit();

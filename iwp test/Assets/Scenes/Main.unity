@@ -559,7 +559,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.727, y: 0.533}
+  m_AnchoredPosition: {x: 5.727, y: 3.132}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &275574630
@@ -582,7 +582,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: If you can't interact, you can probably just run into it!
+  m_text: 'If you can''t interact, you can probably just run into it!
+
+
+    Maybe
+    you should go to sleep now...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3252,7 +3256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1766109196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4229,6 +4233,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 487552400734514877, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 720677086}
+    - target: {fileID: 487552400734514877, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 487552400734514877, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoadScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1139952471605009353, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1377610785}
+    - target: {fileID: 2381445514585888813, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2562357458156352671, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4241,6 +4265,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 720677086}
+    - target: {fileID: 5789457328015726381, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 720677086}
+    - target: {fileID: 5789457328015726381, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: End
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789457328015726381, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoadScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292537863966940701, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7627580154042384019, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.39
@@ -4283,11 +4323,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7729135556891390797, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7729135556891390797, guid: b65789f55c56ba14fb369b4ce7760838, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

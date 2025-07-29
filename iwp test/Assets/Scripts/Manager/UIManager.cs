@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -19,13 +18,6 @@ public class UIManager : MonoBehaviour
 
     public PlayerController playerController;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         health = playerController.currentHealth;
@@ -59,20 +51,6 @@ public class UIManager : MonoBehaviour
 
     public void UpdateQuest(string title, string message)
     {
-        questText.text = $"<b>{title}</b>\n{message}";
-    }
-
-    public void Restarted()
-    {
-        playerController.restartPanel.SetActive(false);
-        Time.timeScale = 1f;
-
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
-    }
-
-    public void Exit()
-    {
-        Application.Quit();
+        questText.text = $"<b>{title}</b>\n\n{message}";
     }
 }

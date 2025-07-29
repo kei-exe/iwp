@@ -32,7 +32,7 @@ public class QuestManager : MonoBehaviour
         if (state == QuestState.InProgress)
         {
             state = QuestState.Completed;
-            uiManager.UpdateQuest(questName, "Completed! Nice job.");
+            uiManager.UpdateQuest(questName, "Completed! Nice job. Now go back to sleep...");
 
             if (trigger != null)
                 trigger.SetActive(true);

@@ -3,6 +3,7 @@ using UnityEngine;
 public class SafeInteract : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject keypadCanvas;
+    [SerializeField] private PlayerController playerController;
 
     public void OnInteract()
     {
@@ -13,6 +14,9 @@ public class SafeInteract : MonoBehaviour, IInteractable
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 0f;
+
+            if (playerController != null)
+                playerController.isLookLocked = true;
         }
     }
 }

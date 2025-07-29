@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
 [System.Serializable]
 public class FootstepAudioSet
 {
-    public string surfaceTag; // e.g. "Concrete", "Grass"
-    public AudioClip[] footstepClips; // multiple variations
+    public string surfaceTag;
+    public AudioClip[] footstepClips;
 }
 
 public class PlayerController : MonoBehaviour
@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float crouchSpeed = 2.5f;
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private float checkDistance = 0.1f;
+    [SerializeField] private float jumpCooldown = 0.2f;
+    private float lastJumpTime = -999f;
 
     [Header("Crouch Settings")]
     [SerializeField] private float crouchHeight = 1f;
@@ -26,6 +28,7 @@ public class PlayerController : MonoBehaviour
     [Header("Mouse Look")]
     public float mouseSensitivity = 1f;
     [SerializeField] private Transform cameraTransform;
+    [HideInInspector] public bool isLookLocked = false;
 
     [Header("Stats")]
     public int maxHealth = 3;
@@ -39,7 +42,6 @@ public class PlayerController : MonoBehaviour
 
     private bool isSprintingBlocked = false;
     private float staminaRegenTimer;
-
     private bool isInvincible = false;
     [SerializeField] private float invisDelay = 2.0f;
 
@@ -50,12 +52,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float plankMaxTiltAngle = 30f;
     [SerializeField] private float plankFallThreshold = 25f;
     private float plankTilt = 0f;
-
     [SerializeField] private float autoTiltSpeed = 5f;
     [SerializeField] private float autoTiltDirectionChangeTime = 2f;
-
     private float autoTiltTimer = 0f;
-    private int autoTiltDirection = 1;        // 1 = right, -1 = left
+    private int autoTiltDirection = 1;
 
     [Header("Plank Detection")]
     [SerializeField] private LayerMask plankLayer;
@@ -68,8 +68,8 @@ public class PlayerController : MonoBehaviour
     [Header("Interaction")]
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private InputActionAsset inputActions;
-    public float interactionDistance = 2f;
-    public LayerMask interactableLayer;
+    [SerializeField] private float interactionDistance = 2f;
+    [SerializeField] private LayerMask interactableLayer;
     private IInteractable lastInteractable;
 
     private InputAction move, look, jump, sprint, crouch, interact;
@@ -95,10 +95,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioManager audioManager;
     private AudioSource sfxSource;
     [SerializeField] private AudioClip[] sfxClips;
+
     [Header("Footstep Audio")]
-    public FootstepAudioSet[] footstepAudioSets;
+    [SerializeField] private FootstepAudioSet[] footstepAudioSets;
     private float footstepTimer = 0f;
-    public float footstepInterval = 0.5f;
+    [SerializeField] private float footstepInterval = 0.5f;
 
     [Header("UI")]
     public GameObject restartPanel;
@@ -116,7 +117,6 @@ public class PlayerController : MonoBehaviour
         spawnPosition = transform.position;
         lastCheckpoint = transform.position;
 
-        // Reference actions
         move = inputActions["Move"];
         look = inputActions["Look"];
         jump = inputActions["Jump"];
@@ -249,12 +249,10 @@ public class PlayerController : MonoBehaviour
         Vector3 move;
         if (isOnPlank)
         {
-            // Only allow forward/backward on plank
             move = transform.forward * moveInput.y;
         }
         else
         {
-            // Normal movement
             move = transform.right * moveInput.x + transform.forward * moveInput.y;
         }
 
@@ -317,11 +315,17 @@ public class PlayerController : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, plankCheckDistance))
         {
-            if (((1 << hit.collider.gameObject.layer) & plankLayer) != 0)
+            Debug.Log("Raycast hit: " + hit.collider.name + ", Layer: " + hit.collider.gameObject.layer);
+
+
+            bool isHitPlankLayer = ((1 << hit.collider.gameObject.layer) & plankLayer) != 0;
+            Debug.Log("Is plank layer? " + isHitPlankLayer);
+
+
+            if (isHitPlankLayer)
             {
                 if (!isOnPlank)
                 {
-                    // First time stepping on plank
                     isOnPlank = true;
 
                     Vector3 plankForward = hit.transform.forward;
@@ -332,10 +336,8 @@ public class PlayerController : MonoBehaviour
                     playerForward.y = 0;
                     playerForward.Normalize();
 
-                    // If dot product is negative, it means plank is facing opposite direction from player
                     if (Vector3.Dot(playerForward, plankForward) < 0)
                     {
-                        // Flip the plank direction
                         plankForward = -plankForward;
                     }
 
@@ -387,6 +389,7 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = Vector3.zero;
             plankTilt = 0f;
             cameraTransform.localRotation = Quaternion.Euler(rotation, 0f, 0f);
+            isOnPlank = false;
         }
         else
         {
@@ -397,6 +400,8 @@ public class PlayerController : MonoBehaviour
 
     void HandleLook()
     {
+        if (isLookLocked) return;
+
         float mouseX = lookInput.x * mouseSensitivity;
         float mouseY = lookInput.y * mouseSensitivity;
 
@@ -411,9 +416,10 @@ public class PlayerController : MonoBehaviour
 
     void HandleJump()
     {
-        if (jump.WasPressedThisFrame() && isGrounded && !isCrouching)
+        if (jump.WasPressedThisFrame() && isGrounded && !isCrouching && Time.time >= lastJumpTime + jumpCooldown)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            lastJumpTime = Time.time;
             PlaySFX(0);
         }
     }
@@ -472,7 +478,7 @@ public class PlayerController : MonoBehaviour
 
     void CheckGrounded()
     {
-        Vector3 origin = transform.position + Vector3.up * 0.1f; // small offset above feet
+        Vector3 origin = transform.position + Vector3.up * 0.1f;
         isGrounded = Physics.Raycast(origin, Vector3.down, col.bounds.extents.y + checkDistance);
     }
 
@@ -507,6 +513,11 @@ public class PlayerController : MonoBehaviour
 
         rb.isKinematic = false;
         Debug.Log("Player respawned.");
+
+        WallsClosingIn walls = FindObjectOfType<WallsClosingIn>();
+        if (walls != null)
+            walls.ResetWalls();
+
         yield return new WaitForSeconds(invisDelay);
         isInvincible = false;
         Debug.Log("RUN");
