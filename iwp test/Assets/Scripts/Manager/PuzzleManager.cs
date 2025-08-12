@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
 {
-    public List<int> correctSequence = new List<int> { 1, 3, 2 }; // example order
+    public List<int> correctSequence = new List<int> { 1, 3, 2 };
     private List<Torch> currentSequence = new List<Torch>();
 
     public QuestManager linkedQuest;
@@ -27,7 +27,6 @@ public class PuzzleManager : MonoBehaviour
 
     void ResetPuzzle()
     {
-        Debug.Log("Wrong order! Resetting puzzle.");
         foreach (Torch t in currentSequence)
         {
             t.ResetTorch();
@@ -37,7 +36,6 @@ public class PuzzleManager : MonoBehaviour
 
     void PuzzleComplete()
     {
-        Debug.Log("Puzzle completed!");
         if (linkedQuest != null)
         {
             linkedQuest.CompleteQuest();

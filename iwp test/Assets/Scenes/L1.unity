@@ -2788,6 +2788,14 @@ MonoBehaviour:
   uiManager: {fileID: 1108502702474450078}
   trigger: {fileID: 0}
   trigger2: {fileID: 0}
+  playerController: {fileID: 0}
+  playerTransform: {fileID: 0}
+  spiderTransform: {fileID: 0}
+  enemyController: {fileID: 0}
+  spiderAnimator: {fileID: 0}
+  fireEffectPrefab: {fileID: 0}
+  bedroomTransform: {fileID: 0}
+  rotateDuration: 1
 --- !u!43 &152312740
 Mesh:
   m_ObjectHideFlags: 0
@@ -42861,7 +42869,7 @@ MonoBehaviour:
     m_Bits: 128
   rb: {fileID: 0}
   animator: {fileID: 4487347876309164506}
-  audioManager: {fileID: 0}
+  audioManager: {fileID: 1546405347}
   sfxClips:
   - {fileID: 8300000, guid: 43266e344b010db4db5c1f2fc7248663, type: 3}
   - {fileID: 8300000, guid: 462f0eb404fc9294f8ea3d03770a5bee, type: 3}
@@ -43938,7 +43946,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2533769132111986932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44076,7 +44084,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 151342731}
         m_TargetAssemblyTypeName: LoadScript, Assembly-CSharp
-        m_MethodName: End
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -48510,7 +48518,7 @@ RectTransform:
   m_Father: {fileID: 1566087614601514899}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

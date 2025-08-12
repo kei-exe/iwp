@@ -19,7 +19,7 @@ public class SettingsMenu : MonoBehaviour
 
     void Start()
     {
-        // Sensitivity setup
+        // sensitivity
         if (playerController != null)
         {
             sensitivitySlider.value = playerController.mouseSensitivity;
@@ -27,17 +27,14 @@ public class SettingsMenu : MonoBehaviour
             sensitivityValue.text = sensitivitySlider.value.ToString("F2") + "%";
         }
 
-        // Load saved audio values
         mainSlider.value = PlayerPrefs.GetFloat("MainVolume", 0.75f);
         bgmSlider.value = PlayerPrefs.GetFloat("BGMVolume", 0.75f);
         sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume", 0.75f);
 
-        // Update text
         mainValue.text = (mainSlider.value * 100f).ToString("F0") + "%";
         bgmValue.text = (bgmSlider.value * 100f).ToString("F0") + "%";
         sfxValue.text = (sfxSlider.value * 100f).ToString("F0") + "%";
 
-        // Add volume listeners
         mainSlider.onValueChanged.AddListener(OnMainChanged);
         bgmSlider.onValueChanged.AddListener(OnBGMChanged);
         sfxSlider.onValueChanged.AddListener(OnSFXChanged);

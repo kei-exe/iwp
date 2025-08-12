@@ -35,15 +35,12 @@ public class LoadScript : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
-    }
+        // in case player movement gets stuck
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
-    public void Settings()
-    {
-        if (settingsPanel != null && !settingsPanel.activeSelf)
-        {
-            settingsPanel.SetActive(true);
-        }
+        SceneManager.LoadScene(sceneName);
     }
 
     public void Restart()
@@ -53,16 +50,6 @@ public class LoadScript : MonoBehaviour
 
     public void Quit()
     {
-        SceneManager.LoadScene("Main");
-    }
-
-    public void End()
-    {
         Application.Quit();
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        LoadScene("Main");
     }
 }

@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Mouse Look")]
     public float mouseSensitivity = 1f;
-    [SerializeField] private Transform cameraTransform;
+    public Transform cameraTransform;
     [HideInInspector] public bool isLookLocked = false;
 
     [Header("Stats")]
@@ -90,6 +90,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Animation")]
     [SerializeField] private Animator animator;
+    private bool isControlEnabled = true;
 
     [Header("Audio")]
     [SerializeField] private AudioManager audioManager;
@@ -135,6 +136,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (!isControlEnabled)
+            return;
+
         CheckGrounded();
 
         moveInput = move.ReadValue<Vector2>();
@@ -179,6 +183,9 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!isControlEnabled)
+            return;
+
         HandleMovement();
     }
 
@@ -263,7 +270,7 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = velocity;
         }
 
-        // anim
+        // animation
         bool isWalking = moveInput.magnitude > 0.1f && isGrounded;
         animator.SetBool("IsWalking", isWalking);
     }
@@ -273,15 +280,14 @@ public class PlayerController : MonoBehaviour
         mouseSensitivity = newSensitivity;
     }
 
+    // L2
     void HandlePlankMovement()
     {
         float forwardInput = Input.GetKey(KeyCode.W) ? 1 : Input.GetKey(KeyCode.S) ? -1 : 0;
         float balanceInput = Input.GetKey(KeyCode.D) ? -1 : Input.GetKey(KeyCode.A) ? 1 : 0;
 
-        // Move forward/back
         transform.position += transform.forward * forwardInput * plankForwardSpeed * Time.deltaTime;
 
-        // Drift logic
         autoTiltTimer += Time.deltaTime;
         if (autoTiltTimer >= autoTiltDirectionChangeTime)
         {
@@ -289,19 +295,15 @@ public class PlayerController : MonoBehaviour
             autoTiltTimer = 0f;
         }
 
-        // Apply auto-tilt drift
         plankTilt += autoTiltDirection * autoTiltSpeed * Time.deltaTime;
 
-        // Apply player counterbalance
         plankTilt += balanceInput * plankBalanceSensitivity * Time.deltaTime;
 
-        // Clamp tilt
         plankTilt = Mathf.Clamp(plankTilt, -plankMaxTiltAngle, plankMaxTiltAngle);
 
-        // Rotate player based on tilt
         transform.localRotation = Quaternion.Euler(0f, transform.localEulerAngles.y, plankTilt);
 
-        // Fall check
+        // check if fall
         if (Mathf.Abs(plankTilt) >= plankFallThreshold)
         {
             LoseLifeAndRespawn();
@@ -315,11 +317,7 @@ public class PlayerController : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, plankCheckDistance))
         {
-            Debug.Log("Raycast hit: " + hit.collider.name + ", Layer: " + hit.collider.gameObject.layer);
-
-
             bool isHitPlankLayer = ((1 << hit.collider.gameObject.layer) & plankLayer) != 0;
-            Debug.Log("Is plank layer? " + isHitPlankLayer);
 
 
             if (isHitPlankLayer)
@@ -378,13 +376,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // respawn
     void LoseLifeAndRespawn()
     {
         currentHealth--;
 
         if (currentHealth > 0)
         {
-            Debug.Log("You fell! Respawning to spawn point.");
             transform.position = spawnPosition;
             rb.linearVelocity = Vector3.zero;
             plankTilt = 0f;
@@ -393,7 +391,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Debug.Log("No lives left!");
             Die();
         }
     }
@@ -409,7 +406,7 @@ public class PlayerController : MonoBehaviour
         rotation = Mathf.Clamp(rotation, -90f, 90f);
 
         Quaternion current = cameraTransform.localRotation;
-        cameraTransform.localRotation = Quaternion.Euler(rotation, 0f, current.eulerAngles.z); // preserve tilt
+        cameraTransform.localRotation = Quaternion.Euler(rotation, 0f, current.eulerAngles.z); // tilt
 
         transform.Rotate(Vector3.up * mouseX);
     }
@@ -488,7 +485,7 @@ public class PlayerController : MonoBehaviour
         currentHealth -= amount;
 
         if (currentHealth > 0)
-            StartCoroutine(RespawnAfterDelay(0.5f)); // shorter delay
+            StartCoroutine(RespawnAfterDelay(0.5f));
         else
             Die();
 
@@ -496,7 +493,6 @@ public class PlayerController : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Player died � all health lost.");
         StartCoroutine(RestartLevel());
     }
 
@@ -512,15 +508,13 @@ public class PlayerController : MonoBehaviour
         transform.position = spawnPosition;
 
         rb.isKinematic = false;
-        Debug.Log("Player respawned.");
 
-        WallsClosingIn walls = FindObjectOfType<WallsClosingIn>();
+        WallsClosingIn walls = FindFirstObjectByType<WallsClosingIn>();
         if (walls != null)
             walls.ResetWalls();
 
         yield return new WaitForSeconds(invisDelay);
         isInvincible = false;
-        Debug.Log("RUN");
     }
 
     private IEnumerator RestartLevel()
@@ -531,18 +525,20 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        Debug.Log("RESTARTING");
-
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        Debug.Log("RESTARTINGGGG");
 
         Time.timeScale = 0f;
         if (restartPanel != null)
         {
-            Debug.Log("RESTARTINGS");
             restartPanel.SetActive(true);
         }
+    }
+
+    public void EnableControl(bool enabled)
+    {
+        isControlEnabled = enabled;
+        isLookLocked = !enabled;
     }
 
     public void SetPlayerEnabled(bool enabled)
@@ -574,12 +570,5 @@ public class PlayerController : MonoBehaviour
             }
         }
         return null;
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.green;
-        Vector3 origin = transform.position + Vector3.up * 0.1f;
-        Gizmos.DrawLine(origin, origin + Vector3.down * plankCheckDistance);
     }
 }

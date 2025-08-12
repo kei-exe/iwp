@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        // Load saved volume
+        // load volume
         float mainVol = PlayerPrefs.GetFloat("MainVolume", 0.75f);
         float bgmVol = PlayerPrefs.GetFloat("BGMVolume", 0.75f);
         float sfxVol = PlayerPrefs.GetFloat("SFXVolume", 0.75f);

@@ -14,7 +14,7 @@ public class Timeline : MonoBehaviour
     public bool loadSceneOnEnd = false;
     public string sceneToLoad;
 
-    public UnityEngine.Events.UnityEvent onTimelineEnd; // player renable
+    public UnityEngine.Events.UnityEvent onTimelineEnd;
 
     void Start()
     {
@@ -41,7 +41,7 @@ public class Timeline : MonoBehaviour
             SceneManager.LoadScene(sceneToLoad);
         }
 
-        onTimelineEnd?.Invoke(); // You can hook any custom logic to this via Inspector
+        onTimelineEnd?.Invoke();
     }
 
     public void PlayTimelineManually()
